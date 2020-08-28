@@ -21,49 +21,8 @@
 
 setTimeout(function(){ 
   
- 
-  // $("#lightShaft").css("display", "block");
-  //     var doorLeft = 0;
-  //     var doorRight = 0;
-  //     var radialBlack = 1;
-  //     var swing = 0;
-  //     var test = setInterval(function(){
-  //           swing = swing + 0.0001 * 2.2;
-  //           swing = swing + 0.0001 * 100;
-  //           doorLeft -=swing;
-  //           doorRight +=swing;
-  //           radialBlack +=0.15;
-  //           $("#leftDoor").css("left", doorLeft-20+"%");
-  //           $("#rightDoor").css("left", doorRight-20+"%");
-
-
-  //           var middleOfLightShaft = $("#lightShaft").width()/2;
-  //           var middleOfBody = $("body").width()/2;
-  //           var doorTop = $("#leftDoor").css("top");
-  //           $("#lightShaft").css({ "left" : middleOfBody - middleOfLightShaft, "top" : doorTop});
-            
-  //           console.log(middleOfLightShaft + "shaft");
-
-  //           $("#doorBackground").css("background", "radial-gradient(white 5%,black " + radialBlack + "%)");
-
-  //           if(doorLeft < -4){
-  //             $("#lightShaft").fadeOut(500);
-  //           }
-  //           if(doorLeft < -35){
-  //             $("#lightShaft").fadeOut(1000);
-  //             $("#doorBackground").fadeOut(3000);
-  //           }
-  //           if(doorLeft < -60){
-  //             clearInterval(test);
-  //             $("#leftDoor").css("display", "none");
-  //           $("#rightDoor").css("display", "none");
-            
-            
-            
-  //           }
          },3);
 
-        // }, 500);
 
         setTimeout(function(){ 
           $("#rightDoor").css("display", "none");
@@ -248,6 +207,38 @@ setTimeout(function(){
 }
 
 
+
+@keyframes biggerThumbnail{
+  from{ transform: scale(1) ; transform: rotateY(0deg); }
+  to{ transform: scale(1.1) ; transform: rotateY(180deg);}
+}
+@keyframes smallerThumbnail{
+  from{ transform: scale(1.1) ; transform: rotateY(180deg);}
+  to{ transform: scale(1) ; transform: rotateY(0deg);}
+}
+
+.thumbnailProjet{
+  animation-name: smallerThumbnail;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.thumbnailProjet:hover{
+  animation-name: biggerThumbnail;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  cursor:pointer;
+}
+
+
+
+
+
+
     </style>
    
 
@@ -265,19 +256,15 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
       </div>
 
       <div class="row" style="min-height: 50vh; " id="projetsContainer">
-        <!-- <div class="col-3 m-4 mx-auto" style="">
-         <div  class=" container-fluid w-100 h-100 p-0 m-0" style="position: relative;">
-          <img src="https://www.diemeto.providedspace.com/piano.png " style="position:absolute; opacity: 0.3; -o-object-fit: contain;" class=""> 
-          <div style="background-color: green; position: absolute; top: 0; bottom: 0; left: 0; right: 0; height: 100%; width: 100%;" class=" p-0 m-0">
-          </div>
-        </div>
-        
-          
-        </div> -->
-        <div class="col-3 m-4 mx-auto">
+
+        <div class="col-3 m-4 mx-auto thumbnailProjet">
           <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid">
         </div>
-        <div class="col-3 m-4 mx-auto">
+
+        <div class="col-3 m-4 mx-auto thumbnailProjet">
+          <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid">
+        </div>
+        <div class="col-3 m-4 mx-auto thumbnailProjet">
           <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid">
         </div>
       </div>

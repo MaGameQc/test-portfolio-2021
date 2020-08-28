@@ -22,51 +22,55 @@
 setTimeout(function(){ 
   
  
- // $("#lightShaft").css("display", "block");
-      var doorLeft = 0;
-      var doorRight = 0;
-      var radialBlack = 1;
-      var swing = 0;
-      var test = setInterval(function(){
-            swing = swing + 0.0001 * 2.2;
-            //swing = swing + 0.0001 * 100;
-            doorLeft -=swing;
-            doorRight +=swing;
-            radialBlack +=0.15;
-          /*  $("#leftDoor").css("left", doorLeft-20+"%");
-            $("#rightDoor").css("left", doorRight-20+"%");*/
+  // $("#lightShaft").css("display", "block");
+  //     var doorLeft = 0;
+  //     var doorRight = 0;
+  //     var radialBlack = 1;
+  //     var swing = 0;
+  //     var test = setInterval(function(){
+  //           swing = swing + 0.0001 * 2.2;
+  //           swing = swing + 0.0001 * 100;
+  //           doorLeft -=swing;
+  //           doorRight +=swing;
+  //           radialBlack +=0.15;
+  //           $("#leftDoor").css("left", doorLeft-20+"%");
+  //           $("#rightDoor").css("left", doorRight-20+"%");
 
 
-            var middleOfLightShaft = $("#lightShaft").width()/2;
-            var middleOfBody = $("body").width()/2;
-            var doorTop = $("#leftDoor").css("top");
-            $("#lightShaft").css({ "left" : middleOfBody - middleOfLightShaft, "top" : doorTop});
+  //           var middleOfLightShaft = $("#lightShaft").width()/2;
+  //           var middleOfBody = $("body").width()/2;
+  //           var doorTop = $("#leftDoor").css("top");
+  //           $("#lightShaft").css({ "left" : middleOfBody - middleOfLightShaft, "top" : doorTop});
             
-            console.log(middleOfLightShaft + "shaft");
+  //           console.log(middleOfLightShaft + "shaft");
 
-           /* $("#doorBackground").css("background", "radial-gradient(white 5%,black " + radialBlack + "%)");
+  //           $("#doorBackground").css("background", "radial-gradient(white 5%,black " + radialBlack + "%)");
 
-            if(doorLeft < -4){
-              $("#lightShaft").fadeOut(500);
-            }
-            if(doorLeft < -35){
-              $("#lightShaft").fadeOut(1000);
-              $("#doorBackground").fadeOut(3000);
-            }
-            if(doorLeft < -60){
-              clearInterval(test);
-              $("#leftDoor").css("display", "none");
-            $("#rightDoor").css("display", "none");
+  //           if(doorLeft < -4){
+  //             $("#lightShaft").fadeOut(500);
+  //           }
+  //           if(doorLeft < -35){
+  //             $("#lightShaft").fadeOut(1000);
+  //             $("#doorBackground").fadeOut(3000);
+  //           }
+  //           if(doorLeft < -60){
+  //             clearInterval(test);
+  //             $("#leftDoor").css("display", "none");
+  //           $("#rightDoor").css("display", "none");
             
             
             
-            }*/
+  //           }
          },3);
 
-        }, 500);
+        // }, 500);
 
         setTimeout(function(){ 
-          $("#doorContainer").css("opacity", "0");
+          $("#rightDoor").css("display", "none");
+          $("#leftDoor").css("display", "none");
+
+          $("#doorBackground").css("display", "none");
+
         }, 2500);
 
 
@@ -92,44 +96,35 @@ setTimeout(function(){
   </div>
     <style>
 
-#leftDoor{
-  position :absolute; 
-  /*left:-20vw;*/ 
-  z-index:2; 
-  min-width: 100vw; 
-  min-height: 100vh;
-  transition-property: width;
-  transition-duration: 2s;
-  transition-timing-function: linear;
-  
-}
+
 @keyframes rightDoorAnimation{
   0% {left: 0; filter:drop-shadow(0 0 0 white);}
   80%{opacity:1; }
-  100% {left: 50%; filter:drop-shadow(-100vw 0 50vw white);}
+  100% {left: 50%; }
 }
 @keyframes leftDoorAnimation{
   0% {left: 0; filter:drop-shadow(0 0 0 white);}
   80%{opacity:1; }
-  100% {left: -50%; filter:drop-shadow(100vw 0 50vw white);}
+  100% {left: -50%; }
 }
 @keyframes backgroundAnimation{
   from {background-position: 50% 0%;}
   to {background-position: 50% 50%; opacity:0;}
 }
-@keyframes doorDissapearing{
+ @keyframes doorDissapearing{
   from{opacity:1;}
   to{opacity:0;}
-}
+} 
 
-/* #doorContainer{
+ #doorContainer{
   animation-name: doorDissapearing;
   animation-delay: 5s;
   animation-duration: 2s;
   animation-timing-function: linear;
-  animation-timing-function: cubic-bezier(0,0,0,1);
   animation-fill-mode:forwards;
-} */
+  z-index:2;
+  position:relative;
+} 
 
 #rightDoor{
   position :absolute; 
@@ -137,7 +132,8 @@ setTimeout(function(){
   z-index:2;
    min-width: 100vw; 
    min-height: 100vh;
-   max-height: 100vh;
+   max-height: 100vh !important;
+   
    animation-name: rightDoorAnimation;
    animation-delay: .5s;
   animation-duration: 2s;
@@ -152,7 +148,7 @@ setTimeout(function(){
   z-index:2;
    min-width: 100vw; 
    min-height: 100vh;
-   max-height: 100vh;
+   max-height: 100vh !important;
 
    animation-name: leftDoorAnimation;
    animation-delay: .5s;
@@ -190,8 +186,8 @@ setTimeout(function(){
   position: fixed;
   right: 0;
   bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   filter: grayscale(100%) blur(6px);
 }
 
@@ -207,7 +203,7 @@ setTimeout(function(){
 }
 
 .content {
-  /*position: fixed;*/
+  position: fixed;
 }
 .columnContent{
   background: rgba(0,0,0, 0.8);

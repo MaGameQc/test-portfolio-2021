@@ -284,6 +284,18 @@
           width: 40%;
 }
 
+@keyframes blinkingBorder{
+  from{border-right: 2px solid rgba(255,255,255,.75);}
+  to{border-right: 2px solid transparent;}
+}
+
+#blinkingBorder{
+  animation-name: blinkingBorder;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
 
 
     </style>
@@ -295,10 +307,16 @@
       <div class="row" style="min-height: 50vh; display:none;" id="upperContainer">
       </div>
 
+      <!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
       <div class="row" style="min-height: 50vh; display:none;" id="aboutMeContainer">
-        <div class="col-8">
-          Where does it come from?
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+        <div class="col-8" id="aboutMeContent">
+          
+            
+          <p id="aboutMeText">
+            <span  id="blinkingBorder" style="border-right: 2px solid rgba(255,255,255,.75); margin:0 auto !important; white-space: nowrap !important; padding-right: 0.30rem"></span>
+
+        </p>
+
         </div>
       </div>
 
@@ -307,24 +325,93 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
         <div class="col-md-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
           <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position:relative;">
           <div style="text-align:center;" class="projectOverlay"> 
-            <p style="" class="testButton">Test</p>
+
+            <button class=" underButton" style="position:relative; transform: translate(-5px, -5px) skew(-30deg);">
+              <p style="transform: skew(30deg); opacity: 0;">test</p>
+            </button>
+
+            <button class="projectsTestButton " style="position:absolute;">
+              <p style="transform: skew(30deg);">TEST</p>
+            </button>
+
           </div>
         </div>
 
+        <style>
+          .projectsTestButton{
+            color: #62c9fc;
+            transform: skew(-30deg);
+            width:40%;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: solid rgb(255, 149, 36) 1px;
+            text-align:center;
+            font-size: 1vw;
+
+            animation-name: notHoveredTestButton;
+            animation-duration: .7s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+          }
+
+          .underButton{
+            color: #62c9fc;
+            transform: skew(-30deg);
+            width:40%;
+            background-color: transparent;
+            border: solid rgb(255, 149, 36) 1px;
+            font-size: 1vw;
+
+          }
+
+          @keyframes hoveredTestButton {
+            from{transform: translate(0px, 0px) skew(-30deg);}
+            to{transform: translate(-5px, -5px) skew(-30deg);   box-shadow : 0 0 12px #03dbfc; }
+          }
+          @keyframes notHoveredTestButton {
+            from{transform: translate(-5px, -5px) skew(-30deg);   box-shadow : 0 0 12px #03dbfc;}
+            to{transform: translate(0px, 0px) skew(-30deg);   box-shadow : none;}
+          }
+
+          .projectsTestButton:hover {
+            animation-name: hoveredTestButton;
+            animation-duration: .7s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+          }
+
+          /* rgba(5, 68, 173, 0.5);*/
+        </style>
         
-        <div class="col-md-3 m-4 mx-auto thumbnailProjet p-0 my-auto" style="">
+        <div class="col-md-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
           <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position:relative;">
           <div style="text-align:center;" class="projectOverlay"> 
-            <p style="" class="testButton">Test</p>
+
+            <button class=" underButton" style="position:relative; transform: translate(-5px, -5px) skew(-30deg);">
+              <p style="transform: skew(30deg); opacity: 0;">test</p>
+            </button>
+
+            <button class="projectsTestButton " style="position:absolute;">
+              <p style="transform: skew(30deg);">TEST</p>
+            </button>
+
           </div>
         </div>
 
-        <div class="col-md-3 m-4 mx-auto thumbnailProjet p-0 my-auto" style="">
+        <div class="col-md-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
           <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position:relative;">
           <div style="text-align:center;" class="projectOverlay"> 
-            <p style="" class="testButton">Test</p>
+
+            <button class=" underButton" style="position:relative; transform: translate(-5px, -5px) skew(-30deg);">
+              <p style="transform: skew(30deg); opacity: 0;">test</p>
+            </button>
+
+            <button class="projectsTestButton " style="position:absolute;">
+              <p style="transform: skew(30deg);">TEST</p>
+            </button>
+
           </div>
         </div>
+
 
 
       </div>
@@ -376,8 +463,8 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
 <script>
 
 $("#aboutMe").click(function(){
-  var text = "bonjour je suis un programmeur web";
-  var writeTextIn = document.getElementById("subTitle");
+  var text = "Bonjour, mon nom est Tommy Audet, gros fan de programmation web et de halo, vous l'aurez surement deviner tout seul...";
+  var writeTextIn = document.getElementById("blinkingBorder");
   var i = 0;
 
   function shit(){
@@ -385,7 +472,7 @@ $("#aboutMe").click(function(){
     writeTextIn.innerHTML += text.charAt(i);
   
     i++
-    setTimeout(shit, 80);
+    setTimeout(shit, 30);
   }
   }
 shit();
@@ -435,12 +522,12 @@ setInterval(function(){
 
 
 $("#projets").click(function(){
- // $("#upperContainer").toggle();
- // $("#projetsContainer").toggle();
+  $("#upperContainer").toggle();
+  $("#projetsContainer").toggle();
 });
 
 $("#aboutMe").click(function(){
- // $("#aboutMeContainer").toggle();
- // $("#upperContainer").toggle();
+  $("#aboutMeContainer").toggle();
+  $("#upperContainer").toggle();
 });
 </script>

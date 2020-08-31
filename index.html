@@ -1,533 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-  </head>
-  <body id="body" style="display:none;">
-
-    
-
-    
-
-    <script>
-      
-
-
-
-
-        setTimeout(function(){ 
-          $("#rightDoor").css("display", "none");
-          $("#leftDoor").css("display", "none");
-
-          $("#doorBackground").css("display", "none");
-
-        }, 2500);
-
-
-         
-    </script>
-    
-
-    <video autoplay muted loop id="myVideo">
-      <source src="halo.mp4" type="video/mp4">
-    </video>
-
-    <div id="overlay" class="bg-dark">
-
-    </div>
-
-     <div id="doorContainer" >
-     <img id="leftDoor" src="door/doorLeft.png" style="" class="img-fluid">
-    <img id="rightDoor" src="door/doorRight.png" style=""  class="img-fluid"> 
-    
-    
-    <div id="doorBackground" style=" ">
-    </div>
-  </div>
-    <style>
-
-
-@keyframes rightDoorAnimation{
-  0% {left: 0; filter:drop-shadow(0 0 0 white);}
-  80%{opacity:1; }
-  100% {left: 50%; }
-}
-@keyframes leftDoorAnimation{
-  0% {left: 0; filter:drop-shadow(0 0 0 white);}
-  80%{opacity:1; }
-  100% {left: -50%; }
-}
-@keyframes backgroundAnimation{
-  from {background-position: 50% 0%;}
-  to {background-position: 50% 50%; opacity:0;}
-}
- @keyframes doorDissapearing{
-  from{opacity:1;}
-  to{opacity:0;}
-} 
-
- #doorContainer{
-  animation-name: doorDissapearing;
-  animation-delay: 5s;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-fill-mode:forwards;
-  z-index:2;
-  position:relative;
-} 
-
-#rightDoor{
-  position :absolute; 
-  /*left: -20vw;*/ 
-  z-index:2;
-   min-width: 100vw; 
-   min-height: 100vh;
-   max-height: 100vh !important;
-   
-   animation-name: rightDoorAnimation;
-   animation-delay: .5s;
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-fill-mode:forwards;
-
-}
-
-#leftDoor{
-  position :absolute; 
-  /*left: -20vw;*/ 
-  z-index:2;
-   min-width: 100vw; 
-   min-height: 100vh;
-   max-height: 100vh !important;
-
-   animation-name: leftDoorAnimation;
-   animation-delay: .5s;
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-fill-mode:forwards;
-}
-
-
-
-#doorBackground{
-  background: radial-gradient( white 30%,black 70%); 
-  width: 100vw; 
-  height: 100vh; 
-  position: absolute;
-   z-index: 1;
-   animation-name: backgroundAnimation;
-   animation-delay: 1s;
-  animation-duration: 3s;
-  animation-timing-function: ease;
-  animation-fill-mode:forwards;
-  background-size: 1600% 1600%;
-
-}
-
-
-
-
-
-      html{
-        overflow: hidden;
-      }
-      
-    #myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100vw;
-  min-height: 100vh;
-  filter: grayscale(100%) blur(6px);
-}
-
-#overlay:before {
-  content: '';
-  position: absolute;
-  background: rgba(5, 68, 173, 0.5);
-  //border-radius: 5px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.content {
-  position: fixed;
-}
-.columnContent{
-  background: rgba(0,0,0, 0.8);
-  background-image: linear-gradient(to right,rgba(0,0,0, 0.5) , rgba(0,0,0,0));
-}
-
-
-.buttonDiv:hover{
-  background-image: linear-gradient(to right,rgba(255, 149, 36, 1)1% , rgba(0,0,0,0) 99%);
-  color:white;
-  margin-top: -1px;
-  margin-bottom: -1px;
-  border-top: 1px solid rgb(255, 149, 36);
-  border-bottom: 1px solid rgb(255, 149, 36);
-  cursor:pointer;
-}
-
-
-
-@font-face{
-  font-family: "haloFont";
-  src: url(halo3.regular.ttf) format("woff"),
-  url(halo3.regular.ttf) format("truetype");
-}
-
-#title{
-  text-shadow : 0 0 12px #03dbfc;
-  font-family: haloFont; 
-  font-size: 6vw; 
-  color:white;
-
-}
-
-#subTitle{
-  //background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(255, 149, 36, 1), rgba(0,0,0,0));
-  color:white;
-  margin-top: -1px;
-  margin-bottom: -1px;
-  border-top: 1px solid rgb(255, 149, 36);
-  border-bottom: 1px solid rgb(255, 149, 36);
-  width: 40%;
-}
-
-
-
-@keyframes biggerThumbnail{
-  from{ transform: scale(1) ;  }
-  to{ transform: scale(1.1) ;}
-}
-@keyframes smallerThumbnail{
-  from{ transform: scale(1.1) ;}
-  to{ transform: scale(1) ;}
-}
-@keyframes overlayAppearing{
-  from{opacity:0; height:0%; min-height:0%;}
-  to{opacity:1; height:100%; min-height:100%; box-shadow: 16px 16px 14px rgba(0,0,0, 0.5);}
-}
-@keyframes overlayDisappearing{
-  from{opacity:1; height:100%; min-height:100%;}
-  to{opacity:0; height:0%; min-height:0%}
-}
-
-.thumbnailProjet{
-  animation-name: smallerThumbnail;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  box-shadow: 6px 6px 5px rgba(0,0,0, 0.5);
-
-}
-
-.thumbnailProjet:hover{
-  animation-name: biggerThumbnail;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  cursor:pointer;
-}
-
-.thumbnailProjet:hover .projectOverlay{
-  animation-name: overlayAppearing;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  cursor:pointer;
-}
-
-.projectOverlay{
-  left:0;
-  right:0;
-   top:0;
-    bottom:0; 
-    width:100%; 
-    height:100%; 
-    background-color: rgba(0,0,0, 0.5); 
-    position: absolute; 
-    opacity:0; 
-    display:flex; 
-    justify-content:center; 
-    align-items:center;
-
-  animation-name: overlayDisappearing;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  cursor:pointer;
-}
-
-
-.testButton{
-  background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(255, 149, 36, 1), rgba(0,0,0,0)) ;
-     color:white;
-      margin-top: -1px;
-       margin-bottom: -1px;
-        border-top: 1px solid rgb(255, 149, 36);
-         border-bottom: 1px solid rgb(255, 149, 36);
-          width: 40%;
-}
-
-@keyframes blinkingBorder{
-  from{border-right: 2px solid rgba(255,255,255,.75);}
-  to{border-right: 2px solid transparent;}
-}
-
-#blinkingBorder{
-  animation-name: blinkingBorder;
-  animation-duration: .5s;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-}
-
-
-
-    </style>
-   
-
-    <div class="content container" style="min-width: 100vw; min-height: 100vh; color: #62c9fc; font-size: 1.5vw;">
-
-      
-      <div class="row" style="min-height: 50vh; display:none;" id="upperContainer">
-      </div>
-
-      <!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
-      <div class="row" style="min-height: 50vh; display:none;" id="aboutMeContainer">
-        <div class="col-8" id="aboutMeContent">
-          
-            
-          <p id="aboutMeText">
-            <span  id="blinkingBorder" style="border-right: 2px solid rgba(255,255,255,.75); margin:0 auto !important; white-space: nowrap !important; padding-right: 0.30rem"></span>
-
-        </p>
-
-        </div>
-      </div>
-
-      <div class="row" style="min-height: 50vh; " id="projetsContainer">
-
-        <div class="col-md-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
-          <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position:relative;">
-          <div style="text-align:center;" class="projectOverlay"> 
-
-            <button class=" underButton" style="position:relative; transform: translate(-5px, -5px) skew(-30deg);">
-              <p style="transform: skew(30deg); opacity: 0;">test</p>
-            </button>
-
-            <button class="projectsTestButton " style="position:absolute;">
-              <p style="transform: skew(30deg);">TEST</p>
-            </button>
-
-          </div>
-        </div>
-
-        <style>
-          .projectsTestButton{
-            color: #62c9fc;
-            transform: skew(-30deg);
-            width:40%;
-            background-color: rgba(0, 0, 0, 0.5);
-            border: solid rgb(255, 149, 36) 1px;
-            text-align:center;
-            font-size: 1vw;
-
-            animation-name: notHoveredTestButton;
-            animation-duration: .7s;
-            animation-fill-mode: forwards;
-            animation-timing-function: ease;
-          }
-
-          .underButton{
-            color: #62c9fc;
-            transform: skew(-30deg);
-            width:40%;
-            background-color: transparent;
-            border: solid rgb(255, 149, 36) 1px;
-            font-size: 1vw;
-
-          }
-
-          @keyframes hoveredTestButton {
-            from{transform: translate(0px, 0px) skew(-30deg);}
-            to{transform: translate(-5px, -5px) skew(-30deg);   box-shadow : 0 0 12px #03dbfc; }
-          }
-          @keyframes notHoveredTestButton {
-            from{transform: translate(-5px, -5px) skew(-30deg);   box-shadow : 0 0 12px #03dbfc;}
-            to{transform: translate(0px, 0px) skew(-30deg);   box-shadow : none;}
-          }
-
-          .projectsTestButton:hover {
-            animation-name: hoveredTestButton;
-            animation-duration: .7s;
-            animation-fill-mode: forwards;
-            animation-timing-function: ease;
-          }
-
-          /* rgba(5, 68, 173, 0.5);*/
-        </style>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+        <title>Tommy Audet</title>
+    </head>
+    <body id="body" style="display: none;">
+
+        <video autoplay muted loop id="myVideo">
+            <source src="halo.mp4" type="video/mp4" />
+        </video>
+        <div id="overlay" class=""></div>
         
-        <div class="col-md-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
-          <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position:relative;">
-          <div style="text-align:center;" class="projectOverlay"> 
+        <div id="doorContainer">
+            <img id="leftDoor" src="door/doorLeft.png" class="img-fluid"/>
+            <img id="rightDoor" src="door/doorRight.png" class="img-fluid"/>
+            <div id="doorBackground"></div>
+        </div>
 
-            <button class=" underButton" style="position:relative; transform: translate(-5px, -5px) skew(-30deg);">
-              <p style="transform: skew(30deg); opacity: 0;">test</p>
-            </button>
+        <div class="content container p-0" style="min-width: 100vw; min-height: 100vh; color: #62c9fc; font-size: 1.5vw;">
 
-            <button class="projectsTestButton " style="position:absolute;">
-              <p style="transform: skew(30deg);">TEST</p>
-            </button>
+          <nav id="navBar" style="height: 10vh; width:10vw; background-color:rgba(0,0,0, 0.8);  position: absolute; z-index: 3;" class="">
+            <button style="float:right;" id="hamburgerButton">mobMenu</button>
+            <div id="listContainer">
+            <!-- <ul style="">
+              <li style="background-color:white;">
+                <a class=" ">hey</a>
+              </li>
+              <li>
+                <a class=" ">hey</a>
+              </li>
+              <li>
+                <a class=" ">hey</a>
+              </li>
+                
+            </ul> -->
 
           </div>
-        </div>
 
-        <div class="col-md-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
-          <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position:relative;">
-          <div style="text-align:center;" class="projectOverlay"> 
+          </nav>
 
-            <button class=" underButton" style="position:relative; transform: translate(-5px, -5px) skew(-30deg);">
-              <p style="transform: skew(30deg); opacity: 0;">test</p>
-            </button>
+          <style>
+            ul{
+              display:flex;
+            }
 
-            <button class="projectsTestButton " style="position:absolute;">
-              <p style="transform: skew(30deg);">TEST</p>
-            </button>
-
-          </div>
-        </div>
-
-
-
-      </div>
+            li{
+              list-style-type: none;
+              margin: 4vh;
+              font-size: 3vh;
+            }
+            a{
+              text-decoration: none;
+            }
 
 
-      <style>
+          </style>
+            <div class="row" style="min-height: 50vh; display: none;" id="upperContainer"></div>
 
-      </style>
-
-      <div class="row" style="min-height: 50vh;">
-        <div class="col-3 columnContent">
-            <div class="row">
-                <div class="buttonDiv w-100" id="projets">
-                    <p class="buttons my-auto">PROJETS</p>
+            <!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
+            <div class="row" style="min-height: 50vh; display: none;" id="aboutMeContainer">
+                <div class="col-8" id="aboutMeContent">
+                    <p id="aboutMeText">
+                        <span id="blinkingBorder" style="border-right: 2px solid rgba(255, 255, 255, 0.75); margin: 0 auto !important; white-space: nowrap !important; padding-right: 0.3rem;"></span>
+                    </p>
                 </div>
             </div>
-            <div class="row">
-                <div class="buttonDiv w-100">
-                    <p class="buttons my-auto" id="aboutMe">QUI SUIS-JE</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="buttonDiv w-100">
-                    <p class="buttons my-auto">MON CV</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="buttonDiv w-100">
-                    <p class="buttons my-auto" >ME CONTACTER</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-3"></div>
-        <div class="col-6"><p class="mx-auto text-center" id="title">Tommy Audet</p>
-          <p class="mx-auto text-center" style="color:white;" id="subTitle">Programmeur Web</p>
-        </div>
-    </div>
-  </div>
-  
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  </body>
+            <div class="row" style="min-height: 50vh;" id="projetsContainer">
+                <div class="col-md-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
+                    <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
+                    <div style="text-align: center;" class="projectOverlay">
+                        <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
+                            <p style="transform: skew(30deg); opacity: 0;">test</p>
+                        </button>
+
+                        <button class="projectsTestButton" style="position: absolute;">
+                            <p style="transform: skew(30deg);">TEST</p>
+                        </button>
+                    </div>
+                </div>
+
+                <style></style>
+
+                <div class="col-md-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
+                    <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
+                    <div style="text-align: center;" class="projectOverlay">
+                        <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
+                            <p style="transform: skew(30deg); opacity: 0;">test</p>
+                        </button>
+
+                        <button class="projectsTestButton" style="position: absolute;">
+                            <p style="transform: skew(30deg);">TEST</p>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-md-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
+                    <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
+                    <div style="text-align: center;" class="projectOverlay">
+                        <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
+                            <p style="transform: skew(30deg); opacity: 0;">test</p>
+                        </button>
+
+                        <button class="projectsTestButton" style="position: absolute;">
+                            <p style="transform: skew(30deg);">TEST</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <style></style>
+
+            <div class="row m-0" style="min-height: 50vh;">
+                <div class="col-3 columnContent">
+                    <div class="row">
+                        <div class="buttonDiv w-100" id="projets">
+                            <p class="buttons my-auto">PROJETS</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="buttonDiv w-100">
+                            <p class="buttons my-auto" id="aboutMe">QUI SUIS-JE</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="buttonDiv w-100">
+                            <p class="buttons my-auto">MON CV</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="buttonDiv w-100">
+                            <p class="buttons my-auto">ME CONTACTER</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <p class="mx-auto text-center" id="title">Tommy Audet</p>
+                    <p class="mx-auto text-center" style="color: white;" id="subTitle">Programmeur Web</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
 </html>
 
-<script>
-
-$("#aboutMe").click(function(){
-  var text = "Bonjour, mon nom est Tommy Audet, gros fan de programmation web et de halo, vous l'aurez surement deviner tout seul...";
-  var writeTextIn = document.getElementById("blinkingBorder");
-  var i = 0;
-
-  function shit(){
-    if(i < text.length){
-    writeTextIn.innerHTML += text.charAt(i);
-  
-    i++
-    setTimeout(shit, 30);
-  }
-  }
-shit();
-
-
-});
-
-  var imageIsLoaded = new Image();
-  imageIsLoaded.src = "door/doorLeft.png";
-  imageIsLoaded.onload = function(){$("body").toggle();}
-
-
-
-  var selection = new Audio("selection.wav");
-  var clicked = new Audio("clicked.wav")
-
-  $(".buttonDiv").mouseenter(function() {
-    selection.currentTime = 0;
-  selection.play();
-});
-$(".buttonDiv").click(function(){
-  clicked.currentTime = 0;
-  clicked.play();
-});
-
-var opacity = 0.3;
-var state = true;
-setInterval(function(){
-            if(opacity >= 1){
-              state = false;
-            }
-            if(opacity <= 0.3){
-              state = true
-            }
-            if(state == true){
-              opacity += 0.01;
-               $("#subTitle").css("background-image", "linear-gradient(to right, rgba(0,0,0,0), rgba(255, 149, 36, "+ opacity +"), rgba(0,0,0,0))");
-            }
-            if(state == false){
-              opacity -= 0.01;
-               $("#subTitle").css("background-image", "linear-gradient(to right, rgba(0,0,0,0), rgba(255, 149, 36, "+ opacity +"), rgba(0,0,0,0))");
-               
-            }
-            
-            
-         },20);
-
-
-$("#projets").click(function(){
-  $("#upperContainer").toggle();
-  $("#projetsContainer").toggle();
-});
-
-$("#aboutMe").click(function(){
-  $("#aboutMeContainer").toggle();
-  $("#upperContainer").toggle();
-});
-</script>
+<script></script>

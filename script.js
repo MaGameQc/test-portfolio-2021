@@ -9,7 +9,7 @@ setTimeout(function(){
 
   
 $("#aboutMe").click(function(){
-    var text = "Bonjour, mon nom est Tommy Audet, gros fan de programmation web et de halo, vous l'aurez surement deviner tout seul...";
+    var text = "Bonjour, mon nom est Tommy Audet, gros fan de programmation web et de halo, vous l'aurez surement deviner tout seul... ceci est un test, je voulais émuler un typing de text, apparament, ca fonctionne correctement avec un mélange de css transition pour le curseur qui flash et de javascript qui ajoute les lettres une à une";
     var writeTextIn = document.getElementById("blinkingBorder");
     var i = 0;
   
@@ -78,18 +78,19 @@ $("#aboutMe").click(function(){
   });
 
   ///////////////////////////ham menu
-  var viewPortHeight = document.documentElement.clientHeight;
-  var viewPortWidth = document.documentElement.clientWidth;
-  var actualNavBarHeight = $("#navBar").height(); 
-  var actualNavBarWidth = $("#navBar").width(); 
-  alert(actualNavBarWidth);
 
   $("#hamburgerButton").click(function(){
-      if($("#navBar").height() == viewPortHeight){
-        $("#navBar").animate({height: actualNavBarHeight+"px",width: actualNavBarWidth + "px", borderRadius: "50%"});
+      let listContainerActualHeight = $("#listContainer").height();
+      if(listContainerActualHeight == 0){
+        $("#listContainer").toggle();
+
+        $("#listContainer").animate({ height: "100vh", opacity: "1"},1000);
       } else{
+        $("#listContainer").animate({ height: "0px", opacity: "0"},1000);
+            setTimeout(function(){
+                $("#listContainer").toggle();
+            },1000);
         
-        $("#navBar").animate({height: viewPortHeight+"px",width: viewPortWidth + "px", borderRadius: "0%"});
       }
 
   });

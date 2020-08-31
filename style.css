@@ -80,7 +80,7 @@
   
   
         html{
-          overflow: hidden;
+           overflow: hidden; 
         }
         
       #myVideo {
@@ -135,6 +135,15 @@
     font-family: haloFont; 
     font-size: 6vw; 
     color:white;
+  
+  }
+
+  #mobileTitle{
+    text-shadow : 0 0 8px #03dbfc;
+    font-family: haloFont; 
+    font-size: 3vh; 
+    color:white;
+
   
   }
   
@@ -285,13 +294,40 @@
   /* rgba(5, 68, 173, 0.5);*/
 
 
-  @keyframes rounding {
-    from{height: 0vh;}
-    to{ height: 100vh;}
+
+
+  #navBar{
+    display:none;
+}
+#listContainer{
+    display:none;
+} 
+
+ @media screen and (max-width: 991.98px) {
+
+    #navBar{
+        display:flex;
+    }
+    /* #listContainer{
+        display:block;
+    } */
   }
-  #navbar .rounding{
-    animation-name rounding;
-    animation-duration: .7s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
+
+  .listItems:hover{
+    background-image: linear-gradient(to right,rgba(255, 149, 36, 1)1% , rgba(0,0,0,0) 99%);
+    color:white;
+    border-top: 1px solid rgb(255, 149, 36);
+    border-bottom: 1px solid rgb(255, 149, 36);
+    cursor:pointer;
+  }
+
+  .listItems:hover a{
+    color:white;
+    
+  }
+  .listItems{
+    color:white;
+    border-top: 1px solid rgb(255, 149, 36);
+    border-bottom: 1px solid rgb(255, 149, 36);
+    cursor:pointer;
   }

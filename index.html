@@ -7,8 +7,11 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
 
+
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style.css" />
         <title>Tommy Audet</title>
     </head>
     <body id="body" style="display: none;">
@@ -26,10 +29,21 @@
 
         <div class="content container p-0" style="min-width: 100vw; min-height: 100vh; color: #62c9fc; font-size: 1.5vw;">
 
-          <nav id="navBar" style="height: 10vh; width:10vw; background-color:rgba(0,0,0, 0.8);  position: absolute; z-index: 3;" class="">
-            <button style="float:right;" id="hamburgerButton">mobMenu</button>
-            <div id="listContainer">
-            <!-- <ul style="">
+          <!-- <div id="navBar" style="height: 10vh; width:100vw; background-color:rgba(0,0,0, 0.8); position: absolute; z-index: 3; display: flex; " class="">
+            <div style="  display:flex; width:100%; display:flex; justify-content: space-between;">
+              <p class="" id="mobileTitle">Tommy Audet</p>
+            <i class="fa fa-bars " style=" align-self:flex-start;  "  id="hamburgerButton"></i>
+
+
+          </div>
+
+          <div style=" flex-direction: row; width:100%; height:100%; position:absolute; z-index: 3;">
+            <p class="" id="mobileTitle">Tommy Audet</p>
+          </div>
+
+
+            <div id="listContainer" style="display:none; flex-direction: flex-row;">
+            <ul style="">
               <li style="background-color:white;">
                 <a class=" ">hey</a>
               </li>
@@ -40,26 +54,60 @@
                 <a class=" ">hey</a>
               </li>
                 
-            </ul> -->
+            </ul>
 
           </div>
 
-          </nav>
+        </div> -->
+
+
+        <nav id="navBar" style="height: 10vh; width:100vw;  background-color:rgba(0,0,0, 0.8); position: relative; z-index: 3; " class="row p-0 m-0">
+          <div id="logo" class="col-11 my-auto">
+            <p class="" id="mobileTitle">Tommy Audet</p>
+          </div>
+          <div id="hamburgerConainer" class=" col-1 text-center my-auto">
+            <i class="fa fa-bars" style="cursor:pointer; font-size:4vh;"  id="hamburgerButton"></i>
+          </div>
+
+        </nav>
+
+        <div class="container-fluid m-0 p-0"style=" width:100vw; height:100vh; background-color:white; position:absolute; z-index:3; background-color:rgba(0,0,0, 0.9);" id="listContainer">
+          <div class="row m-0 p-0" id="">
+              <ul style="text-align:center; width:100%;" class="">
+                <li class="listItems">
+                  <a class=""href="">PROJETS</a>
+                </li>
+                <li class="listItems">
+                  <a class=""href="">QUI SUIS-JE</a>
+                </li>
+                <li class="listItems">
+                  <a class=""href="">MON CV</a>
+                </li>
+                <li class="listItems">
+                  <a class=""href="">ME CONTACTER</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+
+
 
           <style>
-            ul{
-              display:flex;
-            }
 
             li{
               list-style-type: none;
-              margin: 4vh;
-              font-size: 3vh;
+              text-align: center;
+              list-style-position: inside;
+            }
+            a:hover{
+              text-decoration:none;
             }
             a{
-              text-decoration: none;
+              font-size: 8vh;
             }
-
+            ul{
+              padding:0;
+            }
 
           </style>
             <div class="row" style="min-height: 50vh; display: none;" id="upperContainer"></div>
@@ -74,7 +122,7 @@
             </div>
 
             <div class="row" style="min-height: 50vh;" id="projetsContainer">
-                <div class="col-md-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
+                <div class="col-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
                     <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
                     <div style="text-align: center;" class="projectOverlay">
                         <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
@@ -89,7 +137,7 @@
 
                 <style></style>
 
-                <div class="col-md-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
+                <div class="col-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
                     <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
                     <div style="text-align: center;" class="projectOverlay">
                         <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
@@ -102,7 +150,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
+                <div class="col-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
                     <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
                     <div style="text-align: center;" class="projectOverlay">
                         <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">

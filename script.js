@@ -9,7 +9,7 @@ setTimeout(function(){
 
   
 $("#aboutMe").click(function(){
-    var text = "Bonjour, mon nom est Tommy Audet, gros fan de programmation web et de halo, vous l'aurez surement deviner tout seul... ceci est un test, je voulais émuler un typing de text, apparament, ca fonctionne correctement avec un mélange de css transition pour le curseur qui flash et de javascript qui ajoute les lettres une à une";
+    var text = "Bonjour, mon nom est Tommy Audet, gros fan de programmation web et de halo, vous l'aurez surement deviner tout seul... ceci est un test";
     var writeTextIn = document.getElementById("blinkingBorder");
     var i = 0;
   
@@ -82,7 +82,7 @@ $("#aboutMe").click(function(){
   $("#hamburgerButton").click(function(){
       let listContainerActualHeight = $("#listContainer").height();
       if(listContainerActualHeight == 0){
-        $("#listContainer").toggle();
+        $("#listContainer").css({display: "block", width: "100vw"});
 
         $("#listContainer").animate({ height: "100vh", opacity: "1"},1000);
       } else{

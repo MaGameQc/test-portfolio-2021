@@ -308,9 +308,9 @@
     #navBar{
         display:flex;
     }
-    /* #listContainer{
-        display:block;
-    } */
+     #listContainer{
+        display:none;
+    } 
   }
 
   .listItems:hover{

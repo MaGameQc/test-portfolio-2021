@@ -94,18 +94,19 @@
   
   #overlay:before {
     content: '';
-    position: absolute;
+    position: fixed;
     background: rgba(5, 68, 173, 0.5);
-    //border-radius: 5px;
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 0; 
+    min-width:100vw;
+    min-height:100vh;
   }
   
-  .content {
+  /* .content {
     position: fixed;
-  }
+  } */
   .columnContent{
     background: rgba(0,0,0, 0.8);
     background-image: linear-gradient(to right,rgba(0,0,0, 0.5) , rgba(0,0,0,0));
@@ -143,6 +144,7 @@
     font-family: haloFont; 
     font-size: 3vh; 
     color:white;
+    margin: auto auto;
 
   
   }
@@ -305,12 +307,23 @@
 
  @media screen and (max-width: 991.98px) {
 
+    html{
+        overflow: visible !important;
+        
+    }
     #navBar{
         display:flex;
     }
      #listContainer{
         display:none;
     } 
+
+    .projetThumbnailMain{
+        padding: 15% !important;
+    }
+    #pcElements{
+        display:none;
+    }
   }
 
   .listItems:hover{

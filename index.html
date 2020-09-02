@@ -29,43 +29,12 @@
 
         <div class="content container p-0" style="min-width: 100vw; min-height: 100vh; color: #62c9fc; font-size: 1.5vw;">
 
-          <!-- <div id="navBar" style="height: 10vh; width:100vw; background-color:rgba(0,0,0, 0.8); position: absolute; z-index: 3; display: flex; " class="">
-            <div style="  display:flex; width:100%; display:flex; justify-content: space-between;">
-              <p class="" id="mobileTitle">Tommy Audet</p>
-            <i class="fa fa-bars " style=" align-self:flex-start;  "  id="hamburgerButton"></i>
-
-
-          </div>
-
-          <div style=" flex-direction: row; width:100%; height:100%; position:absolute; z-index: 3;">
-            <p class="" id="mobileTitle">Tommy Audet</p>
-          </div>
-
-
-            <div id="listContainer" style="display:none; flex-direction: flex-row;">
-            <ul style="">
-              <li style="background-color:white;">
-                <a class=" ">hey</a>
-              </li>
-              <li>
-                <a class=" ">hey</a>
-              </li>
-              <li>
-                <a class=" ">hey</a>
-              </li>
-                
-            </ul>
-
-          </div>
-
-        </div> -->
-
 
         <nav id="navBar" style="height: 10vh; width:100vw;  background-color:rgba(0,0,0, 0.8); position: relative; z-index: 3; " class="row p-0 m-0">
           <div id="logo" class="col-11 my-auto">
             <p class="" id="mobileTitle">Tommy Audet</p>
           </div>
-          <div id="hamburgerConainer" class=" col-1 text-center my-auto">
+          <div id="hamburgerConainer" class=" col-1 text-center my-auto p-0">
             <i class="fa fa-bars" style="cursor:pointer; font-size:4vh;"  id="hamburgerButton"></i>
           </div>
 
@@ -122,51 +91,70 @@
             </div>
 
             <div class="row" style="min-height: 50vh;" id="projetsContainer">
-                <div class="col-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
-                    <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
-                    <div style="text-align: center;" class="projectOverlay">
-                        <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
-                            <p style="transform: skew(30deg); opacity: 0;">test</p>
-                        </button>
+<div class="col-md-3 m-4 mx-auto p-0 my-auto m-2 projetThumbnailMain" style="">
+              <div class="  thumbnailProjet " style="position:relative;">
+                <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
+                <div style="text-align: center;" class="projectOverlay">
+                  <div class="trapezoid " style="align-self:start;  position:absolute;"><p style="transform: rotate(180deg);">LearnPiano.ca</p></div>
 
-                        <button class="projectsTestButton" style="position: absolute;">
-                            <p style="transform: skew(30deg);">TEST</p>
-                        </button>
-                    </div>
+                    <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
+                        <p style="transform: skew(30deg); opacity: 0;">test</p>
+                    </button>
+
+                    <button class="projectsTestButton" style="position: absolute;">
+                        <p style="transform: skew(30deg);">TEST</p>
+                    </button>
                 </div>
+            </div>
+          </div>
 
-                <style></style>
+          <style>
+            .trapezoid {
+              border-bottom: 50px solid #555;
+              border-left: 25px solid transparent;
+              border-right: 25px solid transparent;
+              height: 0;
+              width: 100%;
+              transform: rotate(180deg);
+            }
+            </style>
 
-                <div class="col-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
-                    <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
-                    <div style="text-align: center;" class="projectOverlay">
-                        <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
-                            <p style="transform: skew(30deg); opacity: 0;">test</p>
-                        </button>
+          <div class="col-md-3 m-4 mx-auto p-0 my-auto m-2 projetThumbnailMain" style="">
+            <div class="  thumbnailProjet " style="">
+              <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
+              <div style="text-align: center;" class="projectOverlay">
+                  <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
+                      <p style="transform: skew(30deg); opacity: 0;">test</p>
+                  </button>
 
-                        <button class="projectsTestButton" style="position: absolute;">
-                            <p style="transform: skew(30deg);">TEST</p>
-                        </button>
-                    </div>
-                </div>
+                  <button class="projectsTestButton" style="position: absolute;">
+                      <p style="transform: skew(30deg);">TEST</p>
+                  </button>
+              </div>
+          </div>
+        </div>
 
-                <div class="col-3 m-4 mx-auto thumbnailProjet p-0 my-auto m-2" style="">
-                    <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
-                    <div style="text-align: center;" class="projectOverlay">
-                        <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
-                            <p style="transform: skew(30deg); opacity: 0;">test</p>
-                        </button>
+        <div class="col-md-3 m-4 mx-auto p-0 my-auto m-2 projetThumbnailMain" style="">
+          <div class="  thumbnailProjet " style="">
+            <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
+            <div style="text-align: center;" class="projectOverlay">
+                <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
+                    <p style="transform: skew(30deg); opacity: 0;">test</p>
+                </button>
 
-                        <button class="projectsTestButton" style="position: absolute;">
-                            <p style="transform: skew(30deg);">TEST</p>
-                        </button>
-                    </div>
-                </div>
+                <button class="projectsTestButton" style="position: absolute;">
+                    <p style="transform: skew(30deg);">TEST</p>
+                </button>
+            </div>
+        </div>
+      </div>
+
+
             </div>
 
             <style></style>
 
-            <div class="row m-0" style="min-height: 50vh;">
+            <div class="row m-0" style="min-height: 50vh;" id="pcElements">
                 <div class="col-3 columnContent">
                     <div class="row">
                         <div class="buttonDiv w-100" id="projets">

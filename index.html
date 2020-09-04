@@ -30,15 +30,105 @@
         <div class="content container p-0" style="min-width: 100vw; min-height: 100vh; color: #62c9fc; font-size: 1.5vw;">
 
 
+        <!-- <nav id="navBar" style="height: 10vh; width:100vw;  background-color:rgba(0,0,0, 0.8); position: relative; z-index: 3; " class="row p-0 m-0">
+          <div id="logo" class="col-11 my-auto">
+            <p class="" id="mobileTitle">Tommy Audet</p>
+          </div>
+
+
+          <div id="hamburgerConainer" class=" col-1 text-center my-auto p-0">
+            <div  style="cursor:pointer;"  id="hamburgerButton">
+              <span id="line1"></span>
+              <span id="line2"></span>
+              <span id="line3"></span>
+            </div>
+            
+          </div>
+
+        </nav> -->
+
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- 
         <nav id="navBar" style="height: 10vh; width:100vw;  background-color:rgba(0,0,0, 0.8); position: relative; z-index: 3; " class="row p-0 m-0">
           <div id="logo" class="col-11 my-auto">
             <p class="" id="mobileTitle">Tommy Audet</p>
           </div>
+
+
           <div id="hamburgerConainer" class=" col-1 text-center my-auto p-0">
-            <i class="fa fa-bars" style="cursor:pointer; font-size:4vh;"  id="hamburgerButton"></i>
+            <div  style="cursor:pointer;"  id="hamburgerButton">
+              <span id="line1"></span>
+              <span id="line2"></span>
+              <span id="line3"></span>
+            </div>
+            
+          </div>
+
+        </nav> -->
+
+        
+        <nav id="navBar2" style=" z-index: 3; " class="">
+          <!-- <div id="logo" class="col-11 my-auto">
+            <p class="" id="mobileTitle">Tommy Audet</p>
+          </div>
+
+
+          <div id="hamburgerConainer" class=" col-1 text-center my-auto p-0">
+            <div  style="cursor:pointer;"  id="hamburgerButton">
+              <span id="line1"></span>
+              <span id="line2"></span>
+              <span id="line3"></span>
+            </div>
+            
+          </div> -->
+          <div class="navItems">
+            <p class="" id="mobileTitle">Tommy Audet</p>
+          </div>
+          <div class="navItems">
+          </div>
+          <div class="navItems">
+            <div  style="cursor:pointer;"  id="hamburgerButton">
+              <span id="line1"></span>
+              <span id="line2"></span>
+              <span id="line3"></span>
+            </div>
           </div>
 
         </nav>
+        
+        
+        <style>
+          #navBar2{
+            display:grid;
+            position: relative;
+            grid-template-columns: 20vw auto 8vw;
+            grid-template-rows: 10vh;
+            grid-gap: 20px;
+            background-color:rgba(0,0,0, 0.8);
+            width:100vw;
+          }
+          #navBar2 div{
+          }
+
+          #mobileTitle{
+    text-shadow : 0 0 8px #03dbfc;
+    font-family: haloFont; 
+    font-size: 2.5vw; 
+    color:white;
+  }
+  .navItems{
+    display:grid;
+    justify-content: center;
+    align-content: center;
+  }
+
+        </style>
+        
+
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
 
         <div class="container-fluid m-0 p-0"style=" width:100vw; height:0vh; background-color:white; position:absolute; z-index:3; background-color:rgba(0,0,0, 0.9);" id="listContainer">
           <div class="row m-0 p-0" id="">
@@ -79,7 +169,7 @@
             }
 
           </style>
-            <div class="row" style="min-height: 50vh; display: none;" id="upperContainer"></div>
+            <div class="row " style="min-height: 50vh; display: none;" id="upperContainer"></div>
 
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------- -->
             <div class="row" style="min-height: 50vh; display: none;" id="aboutMeContainer">
@@ -90,67 +180,107 @@
                 </div>
             </div>
 
-            <div class="row" style="min-height: 50vh;" id="projetsContainer">
-<div class="col-md-3 m-4 mx-auto p-0 my-auto m-2 projetThumbnailMain" style="">
-              <div class="  thumbnailProjet " style="position:relative;">
+
+            <!-- ////////////////////////////////////////////////////////////projects*********************************************************************************** -->
+
+
+
+    <!-- ///////////////////////////////////////////////////////////////////////////////////////TEST GRID ////////////////////////////////////////////////////////////////// -->
+
+    <div id="maContainer">
+
+      <div class="itemColumn">
+        <p>shit</p>
+      </div>
+          <div id="projectCont">
+            <div class="itemColumn">
+              <div class="  thumbnailProjet " style="">
                 <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
                 <div style="text-align: center;" class="projectOverlay">
-                  <div class="trapezoid " style="align-self:start;  position:absolute;"><p style="transform: rotate(180deg);">LearnPiano.ca</p></div>
-
                     <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
                         <p style="transform: skew(30deg); opacity: 0;">test</p>
                     </button>
-
+  
                     <button class="projectsTestButton" style="position: absolute;">
                         <p style="transform: skew(30deg);">TEST</p>
                     </button>
                 </div>
             </div>
-          </div>
-
-          <style>
-            .trapezoid {
-              border-bottom: 50px solid #555;
-              border-left: 25px solid transparent;
-              border-right: 25px solid transparent;
-              height: 0;
-              width: 100%;
-              transform: rotate(180deg);
-            }
-            </style>
-
-          <div class="col-md-3 m-4 mx-auto p-0 my-auto m-2 projetThumbnailMain" style="">
-            <div class="  thumbnailProjet " style="">
-              <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
-              <div style="text-align: center;" class="projectOverlay">
-                  <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
-                      <p style="transform: skew(30deg); opacity: 0;">test</p>
-                  </button>
-
-                  <button class="projectsTestButton" style="position: absolute;">
-                      <p style="transform: skew(30deg);">TEST</p>
-                  </button>
-              </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 m-4 mx-auto p-0 my-auto m-2 projetThumbnailMain" style="">
-          <div class="  thumbnailProjet " style="">
-            <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
-            <div style="text-align: center;" class="projectOverlay">
-                <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
-                    <p style="transform: skew(30deg); opacity: 0;">test</p>
-                </button>
-
-                <button class="projectsTestButton" style="position: absolute;">
-                    <p style="transform: skew(30deg);">TEST</p>
-                </button>
             </div>
-        </div>
-      </div>
-
-
+            <div class="itemColumn">
+              <div class="  thumbnailProjet " style="">
+                <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
+                <div style="text-align: center;" class="projectOverlay">
+                    <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
+                        <p style="transform: skew(30deg); opacity: 0;">test</p>
+                    </button>
+  
+                    <button class="projectsTestButton" style="position: absolute;">
+                        <p style="transform: skew(30deg);">TEST</p>
+                    </button>
+                </div>
             </div>
+            </div>
+            <div class="itemColumn">
+              <div class="  thumbnailProjet " style="">
+                <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
+                <div style="text-align: center;" class="projectOverlay">
+                    <button class="underButton" style="position: relative; transform: translate(-5px, -5px) skew(-30deg);">
+                        <p style="transform: skew(30deg); opacity: 0;">test</p>
+                    </button>
+  
+                    <button class="projectsTestButton" style="position: absolute;">
+                        <p style="transform: skew(30deg);">TEST</p>
+                    </button>
+                </div>
+            </div>
+            </div>
+          </div>
+  <div class="itemColumn">
+    <p>wow</p>
+  </div>
+
+
+</div>
+
+
+
+
+    <style>
+      #maContainer{
+        display:grid;
+        height:90vh;
+        width:100vw;
+        background:white;
+        position: relative;
+        grid-template-columns: 10% auto 10% ;
+        grid-template-rows: repeat(2, 45vh) ;
+        grid-gap: 2px;
+      }
+
+      .itemColumn{
+        background-color:grey;
+        padding: 5%;
+        
+      }
+      
+      #projectCont{
+        background: peru;
+        display:grid;
+        height:100%;
+        width:100%;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(3, auto) ;
+        grid-template-rows: auto ;
+        grid-gap: 2px;
+
+      }
+
+
+    </style>
+
+  <!-- ////////////////////////////////////////////////////////////projects*********************************************************************************** -->
 
             <style></style>
 

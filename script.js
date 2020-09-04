@@ -85,6 +85,39 @@ $("#aboutMe").click(function(){
         $("#listContainer").css({display: "block", width: "100vw"});
 
         $("#listContainer").animate({ height: "100vh", opacity: "1"},1000);
+
+          document.getElementById("line1").animate(
+            [
+              { transform: 'translate(0px)'},
+              { transform: 'rotate(-45deg) translate(0, 11px)'}
+            ], {
+              duration: 500,
+              fill: 'both'
+            }
+          );
+
+          document.getElementById("line2").animate(
+            [
+              { transform: 'translate(0px)'},
+              { transform: 'translate(-100px)', opacity: '0'}
+            ], {
+              duration: 500,
+              delay: 100,
+              fill: 'forwards'
+            }
+          );
+
+          document.getElementById("line3").animate(
+            [
+              { transform: 'translate(0px)'},
+              { transform: 'rotate(45deg) translate(0, -11px)'}
+            ], {
+              duration: 500,
+              delay: 0,
+              fill: 'both'
+            }
+          );
+
       } else{
         $("#listContainer").animate({ height: "0px", opacity: "0"},1000);
             setTimeout(function(){

@@ -82,27 +82,31 @@ $("#aboutMe").click(function(){
   $("#hamburgerButton").click(function(){
       let listContainerActualHeight = $("#listContainer").height();
       if(listContainerActualHeight == 0){
+        clicked.play();
+
         $("#listContainer").css({display: "block", width: "100vw"});
 
         $("#listContainer").animate({ height: "100vh", opacity: "1"},1000);
 
+
           document.getElementById("line1").animate(
             [
               { transform: 'translate(0px)'},
-              { transform: 'rotate(-45deg) translate(0, 11px)'}
+              { transform: 'translateY(-100px)', opacity: '0'},
+              { transform: 'rotate(-45deg) translate(0, 11px)', opacity: "1"}
             ], {
-              duration: 500,
-              fill: 'both'
+              duration: 800,
+              delay: 0,
+              fill: 'forwards'
             }
           );
 
           document.getElementById("line2").animate(
             [
               { transform: 'translate(0px)'},
-              { transform: 'translate(-100px)', opacity: '0'}
-            ], {
-              duration: 500,
-              delay: 100,
+              { transform: 'translate(-100px)', opacity: '0'}            ], {
+              duration: 300,
+              delay: 150,
               fill: 'forwards'
             }
           );
@@ -110,19 +114,66 @@ $("#aboutMe").click(function(){
           document.getElementById("line3").animate(
             [
               { transform: 'translate(0px)'},
-              { transform: 'rotate(45deg) translate(0, -11px)'}
+              { transform: 'translateY(100px)', opacity: '0'},
+              { transform: 'rotate(45deg) translate(0, -11px)', opacity: "1"}
             ], {
-              duration: 500,
-              delay: 0,
-              fill: 'both'
+              duration: 800,
+              delay: 300,
+              fill: 'forwards'
             }
           );
 
+
+
+
+
+         
+
+
       } else{
+        clicked.play();
+
         $("#listContainer").animate({ height: "0px", opacity: "0"},1000);
             setTimeout(function(){
                 $("#listContainer").toggle();
             },1000);
+
+
+            document.getElementById("line1").animate(
+              [
+                { transform: 'rotate(0deg) translate(0, 11px)', opacity: "1"},
+                { transform: 'rotate(0deg) translateY(-100px)', opacity: "0"},
+                { transform: 'translate(0px)', opacity: '1'}
+                
+              ], {
+                duration: 800,
+                delay: 0,
+                fill: 'forwards'
+              }
+            );
+  
+            document.getElementById("line2").animate(
+              [
+                { transform: 'translate(-100px)'},
+                { transform: 'translate(-0px)', opacity: '1'}            ], {
+                duration: 300,
+                delay: 150,
+                fill: 'forwards'
+              }
+            );
+  
+            document.getElementById("line3").animate(
+              [
+                { transform: 'rotate(0deg) translate(0, -11px)', opacity: "1"},
+                { transform: 'rotate(0deg) translateY(100px)' , opacity: "0"},
+                { transform: 'translate(0px)', opacity: '1'}
+                
+              ], {
+                duration: 800,
+                delay: 300,
+                fill: 'forwards'
+              }
+            );
         
       }
 

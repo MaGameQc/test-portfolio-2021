@@ -131,25 +131,7 @@
     url(halo3.regular.ttf) format("truetype");
   }
   
-  #title{
-    text-shadow : 0 0 12px #03dbfc;
-    font-family: haloFont; 
-    font-size: 6vw; 
-    color:white;
-  
-  }
-
-
-  
-  #subTitle{
-    //background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(255, 149, 36, 1), rgba(0,0,0,0));
-    color:white;
-    margin-top: -1px;
-    margin-bottom: -1px;
-    border-top: 1px solid rgb(255, 149, 36);
-    border-bottom: 1px solid rgb(255, 149, 36);
-    width: 40%;
-  }
+ 
   
   
   

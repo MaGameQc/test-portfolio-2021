@@ -303,7 +303,7 @@ li {
     bottom:0; 
     width:100%; 
     height:100%; 
-    background-color: rgba(255, 149, 36, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5); 
     position: absolute; 
     opacity:0; 
     display:grid;
@@ -336,7 +336,7 @@ grid-area: title;
 
 
 
-.testButton{
+/* .testButton{
   background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(255, 149, 36, 1), rgba(0,0,0,0)) ;
      color:white;
       margin-top: -1px;
@@ -344,14 +344,15 @@ grid-area: title;
         border-top: 1px solid rgb(255, 149, 36);
          border-bottom: 1px solid rgb(255, 149, 36);
           width: 40%;
-}
+} */
 
 .projectsTestButton{
   color: white;
   transform: skew(-30deg);
   width:60%;
   background-color: rgba(0, 0, 0, 0.5);
-  border: solid #03dbfc 1px;
+  border: solid rgb(255, 149, 36) 2px;
+  color: #03dbfc;
   text-align:center;
   font-size: 1vw;
   
@@ -361,13 +362,13 @@ grid-area: title;
   animation-timing-function: ease;
 }
 
-.underButton{
+.underTestButton{
 
   color: #62c9fc;
   transform: skew(-30deg);
   width:60%;
   background-color: transparent;
-  border: solid #03dbfc 1px;
+  border: solid rgb(255, 149, 36) 2px;
   font-size: 1vw;
 
 }
@@ -378,6 +379,41 @@ grid-area: title;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
 }
+
+/*     git */
+.projectsGitButton{
+  color: white;
+  transform: skew(-330deg);
+  width:60%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid rgb(255, 149, 36) 2px;
+  color: #03dbfc;
+  text-align:center;
+  font-size: 1vw;
+  
+  /* animation-name: notHoveredTestButton;
+  animation-duration: .7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease; */
+}
+
+.underGitButton{
+
+  color: #62c9fc;
+  transform: skew(30deg);
+  width:60%;
+  background-color: transparent;
+  border: solid rgb(255, 149, 36) 2px;
+  font-size: 1vw;
+
+}
+
+/* .projectsGitButton:hover{
+  /* animation-name: hoveredTestButton;
+  animation-duration: .7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease; */
+} */
 
 @keyframes hoveredTestButton {
   from{transform: translate(-5px, -5px) skew(-30deg);}

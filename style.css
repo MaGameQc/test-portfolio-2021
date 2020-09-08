@@ -366,6 +366,7 @@ text-align: center;
   opacity: 0;
   margin:auto;
   padding:5%;
+  font-size: 1.8vh;
 }
 
 
@@ -398,6 +399,7 @@ text-align: center;
   padding:5%;
   margin:auto;
   padding:5%;
+  font-size: 1.8vh;
 }
 
 /*    -------------------------------------------------------------------------------------------------------- GIT --------------------------------------------------------------------------------  */
@@ -436,12 +438,14 @@ text-align: center;
   transform: skew(-30deg);
   margin:auto;
   padding:5%; 
+  font-size: 1.8vh;
 }
 
 .gitBtnText{
   transform: skew(-30deg);
   margin:auto;
   padding:5%;
+  font-size: 1.8vh;
 }
 
 
@@ -452,24 +456,29 @@ text-align: center;
   animation-timing-function: ease; 
 }
 
-
+.overlayFooterElement{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #03dbfc;
+}
 
  @keyframes hoveredGitButton {
-  from{transform: translate(5px, -5px) skew(30deg);}
-  to{transform: translate(0px, 0px) skew(30deg);   box-shadow : 0 0 12px #03dbfc; }
+  from{transform: translate(5px, -5px) skew(30deg); color: #62c9fc;}
+  to{transform: translate(0px, 0px) skew(30deg);   box-shadow : 0 0 12px #03dbfc; color: white;}
 }
  @keyframes notHoveredGitButton {
-  from{transform: translate(0px, 0px) skew(30deg);   box-shadow : 0 0 12px #03dbfc;}
-  to{transform: translate(5px, -5px) skew(30deg);   box-shadow : none;}
+  from{transform: translate(0px, 0px) skew(30deg);   box-shadow : 0 0 12px #03dbfc; color: white;}
+  to{transform: translate(5px, -5px) skew(30deg);   box-shadow : none; color: #62c9fc}
 }  
 
 @keyframes hoveredDemoButton {
-  from{transform: translate(-5px, -5px) skew(-30deg);}
-  to{transform: translate(0px, 0px) skew(-30deg);   box-shadow : 0 0 12px #03dbfc; }
+  from{transform: translate(-5px, -5px) skew(-30deg); color: #62c9fc;}
+  to{transform: translate(0px, 0px) skew(-30deg);   box-shadow : 0 0 12px #03dbfc; color: white; }
 }
  @keyframes notHoveredDemoButton {
-  from{transform: translate(0px, 0px) skew(-30deg);   box-shadow : 0 0 12px #03dbfc;}
-  to{transform: translate(-5px, -5px) skew(-30deg);   box-shadow : none;}
+  from{transform: translate(0px, 0px) skew(-30deg);   box-shadow : 0 0 12px #03dbfc; color: white;}
+  to{transform: translate(-5px, -5px) skew(-30deg);   box-shadow : none; color: #62c9fc;}
 }  
 
 
@@ -546,7 +555,7 @@ text-align: center;
  @media screen and (max-width: 991.98px) {
 
     html{
-        /* overflow: visible !important; */
+        overflow: visible !important;
         
     }
     #navBar2{

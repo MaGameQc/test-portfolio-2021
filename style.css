@@ -535,12 +535,18 @@ text-align: center;
     to{border-right: 2px solid transparent;}
   }
   
-  #blinkingBorder{
+  #aboutMeText{
+
+    color:white;
+    display:inline;
+
     animation-name: blinkingBorder;
     animation-duration: .5s;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
+    display:inline;
   }
+
   
 
 
@@ -575,4 +581,6 @@ text-align: center;
   }
 
 
-
+.color{
+   background-color: peachpuff; 
+}

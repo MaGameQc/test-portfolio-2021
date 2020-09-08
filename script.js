@@ -7,7 +7,7 @@ setTimeout(function () {
 
 $("#aboutMe").click(function () {
   var text = "Bonjour, mon nom est Tommy Audet, gros fan de programmation web et de halo, vous l'aurez surement deviner tout seul... ceci est un test";
-  var writeTextIn = document.getElementById("blinkingBorder");
+  var writeTextIn = document.getElementById("aboutMeText");
   var i = 0;
 
   function shit() {
@@ -65,7 +65,7 @@ $("#projets").click(function () {
 
 $("#aboutMe").click(function () {
   $("#aboutMeContainer").toggle();
-  $("#upperContainer").toggle();
+  $("#projectCont").toggle();
 });
 
 ///////////////////////////ham menu

@@ -75,14 +75,14 @@
 
             <!-- /////////////////////////////////////////////////////////////////////////////////////// projets ////////////////////////////////////////////////////////////////// -->
 
-            <div id="dynamicContainer">
+            <section id="dynamicContainer">
                 <div class="itemColumn"></div>
                 <div id="projectCont">
                    
  <!-- ************************************************************************************** projet 1 ************************************************************************************************** -->
 
 
- <div class="thumbnailContainer" id="project1">
+ <div class="thumbnailContainer" >
     <div class="thumbnailProjet">
         <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
         <div class="projectOverlay">
@@ -127,7 +127,7 @@
 
  <!-- ************************************************************************************** projet 2 ************************************************************************************************** -->
 
-                    <div class="thumbnailContainer" id="project2">
+                    <div class="thumbnailContainer" >
                         <div class="thumbnailProjet">
                             <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
                             <div class="projectOverlay">
@@ -171,7 +171,7 @@
  <!-- ************************************************************************************** projet 3 ************************************************************************************************** -->
 
 
- <div class="thumbnailContainer" id="project3">
+ <div class="thumbnailContainer">
     <div class="thumbnailProjet">
         <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
         <div class="projectOverlay">
@@ -215,6 +215,9 @@
 
 
 
+</div>
+
+<style></style>
 
 
 
@@ -227,87 +230,146 @@
 
 
 
-                </div>
 
-                <style></style>
 
-                <div class="itemColumn"></div>
-            </div>
 
-            <style>
-                #dynamicContainer {
-                    grid-column: 1 / 5;
-                    grid-row: 2 / 3;
-                    display: grid;
-                    min-height: 45vh;
-                    width: 100vw;
-                    /* background:white; */
-                    position: relative;
-                    grid-template-columns: 10% auto 10%;
-                    grid-template-rows: auto;
-                    grid-gap: 2px;
-                }
 
-                .thumbnailContainer {
-                    /* background-color:grey; */
-                    padding: 5%;
-                }
 
-                #projectCont {
-                    /* background: peru; */
-                    display: grid;
-                    height: 100%;
-                    width: 100%;
-                    justify-content: center;
-                    align-content: center;
-                    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-                    grid-template-columns: repeat(3, auto);
-                    justify-content: space-evenly;
-                    grid-template-rows: auto;
-                    grid-gap: 2px;
-                }
 
-                @media only screen and (max-width: 992px) {
-                    #projectCont{
-                        grid-template-areas: 'project1 project2'
-                        "project3 project3";
 
-                    }
-                    #project1{
-                        grid-area: project1;
-                    }
-                    #project2{
-                        grid-area: project2;
-                    }
-                    #project3{
-                        grid-area: project3;
-                        width: 55%;
-                        margin: auto;
-                    }
-                } 
 
-                @media only screen and (max-width: 768px) {
-                    #projectCont{
-                        grid-template-areas: 
-                        "project1"
-                        "project2"
-                        "project3";
+<div class="" style=" display: none;" id="aboutMeContainer">
+        <div id="aboutMeImageContainer" class="">
+            <img id="aboutMeImage" src="image/tomblue.png"  alt="" style="height:auto; width: 100%; filter:drop-shadow( 15px 5px 10px #62c9fc); margin-auto; ">
+        </div>
+        <div id="aboutMeTextContainer" class="">
+                <p id="aboutMeText" ></p>
+        </div>
+        <div id="aboutMeLanguageContainer" class="">
+            <img src="image/html.png" style="width:50%; height: auto;" alt="">
+        </div>
+            
+</div>
 
-                    }
-                    #project1{
-                        grid-area: project1;
-                    }
-                    #project2{
-                        grid-area: project2;
-                    }
-                    #project3{
-                        grid-area: project3;
-                        width:100%;
-                    }
-                } 
-            </style>
 
-            <!-- /////////////////////////////////////////////////////////////////////////////////////// fin projets ////////////////////////////////////////////////////////////////// -->
+<style>
+
+#aboutMeContainer{
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    display:grid;
+}
+
+#aboutMeImageContainer{
+    grid-row: 1/3;
+    grid-column: 1/2;
+}
+
+#aboutMeTextContainer{
+ grid-row: 2/3;
+ grid-column: 2/3;
+
+}
+
+#aboutMeLanguageContainer{
+    grid-row: 1/2;
+ grid-column: 2/3;
+}
+</style>
+
+
+
+<div class="itemColumn"></div>
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+<style>
+#dynamicContainer {
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+    display: grid;
+    min-height: 45vh;
+    width: 100vw;
+    /* background:white; */
+    position: relative;
+    grid-template-columns: 10% auto 10%;
+    grid-template-rows: auto;
+    grid-gap: 2px;
+}
+
+.thumbnailContainer {
+    /* background-color:grey; */
+    padding: 5%;
+}
+
+#projectCont {
+    /* background: peru; */
+    display: grid;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-evenly;
+    grid-template-rows: auto;
+    grid-gap: 2px;
+}
+
+@media only screen and (max-width: 992px) {
+    #projectCont{
+        grid-template-areas: 'project1 project2'
+        "project3 project3";
+
+    }
+    .thumbnailContainer:nth-child(1){
+        grid-area: project1;
+    }
+    .thumbnailContainer:nth-child(2){
+        grid-area: project2;
+    }
+    .thumbnailContainer:nth-child(3){
+        grid-area: project3;
+        width: 55%;
+        margin: auto;
+    }
+} 
+
+@media only screen and (max-width: 768px) {
+    #projectCont{
+        grid-template-areas: 
+        "project1"
+        "project2"
+        "project3";
+
+    }
+    .thumbnailContainer:nth-child(1){
+        grid-area: project1;
+    }
+    .thumbnailContainer:nth-child(2){
+        grid-area: project2;
+    }
+    .thumbnailContainer:nth-child(3){
+        grid-area: project3;
+        width:100%;
+    }
+} 
+</style>
+
+ <!-- ************************************************************************************** FIN PROJETS ************************************************************************************************** -->
+
+
+
 
             <!-- //////////////////////////////////////////////////////////////////////////////BAS DE PAGE/////////////////////////////////////////////////////////////////// -->
 

@@ -348,7 +348,7 @@ grid-area: title;
 
 .projectsTestButton{
   color: white;
-  transform: skew(-30deg);
+  transform: skew(-30deg) translate(-5px, -5px);
   width:60%;
   background-color: rgba(0, 0, 0, 0.5);
   border: solid rgb(255, 149, 36) 2px;
@@ -383,7 +383,7 @@ grid-area: title;
 /*     git */
 .projectsGitButton{
   color: white;
-  transform: skew(-330deg);
+  transform: translate(5px, -5px) skew(30deg);
   width:60%;
   background-color: rgba(0, 0, 0, 0.5);
   border: solid rgb(255, 149, 36) 2px;
@@ -391,11 +391,13 @@ grid-area: title;
   text-align:center;
   font-size: 1vw;
   
-  /* animation-name: notHoveredTestButton;
+  animation-name: notHoveredGitButton;
   animation-duration: .7s;
   animation-fill-mode: forwards;
-  animation-timing-function: ease; */
+  animation-timing-function: ease;
 }
+
+
 
 .underGitButton{
 
@@ -408,25 +410,38 @@ grid-area: title;
 
 }
 
-/* .projectsGitButton:hover{
-  /* animation-name: hoveredTestButton;
+.projectsGitButton:hover{
+   animation-name: hoveredGitButton;
   animation-duration: .7s;
   animation-fill-mode: forwards;
-  animation-timing-function: ease; */
-} */
+  animation-timing-function: ease; 
+}
+
+ @keyframes hoveredGitButton {
+  from{transform: translate(5px, -5px) skew(30deg);}
+  to{transform: translate(0px, 0px) skew(30deg);   box-shadow : 0 0 12px #03dbfc; }
+}
+ @keyframes notHoveredGitButton {
+  from{transform: translate(0px, 0px) skew(30deg);   box-shadow : 0 0 12px #03dbfc;}
+  to{transform: translate(5px, -5px) skew(30deg);   box-shadow : none;}
+}  
 
 @keyframes hoveredTestButton {
   from{transform: translate(-5px, -5px) skew(-30deg);}
   to{transform: translate(0px, 0px) skew(-30deg);   box-shadow : 0 0 12px #03dbfc; }
 }
-@keyframes notHoveredTestButton {
+ @keyframes notHoveredTestButton {
   from{transform: translate(0px, 0px) skew(-30deg);   box-shadow : 0 0 12px #03dbfc;}
   to{transform: translate(-5px, -5px) skew(-30deg);   box-shadow : none;}
-}
+}  
+
 
 
 .overlaySection{
   /* background-color: peachpuff; */
+}
+.languagesUsed{
+  font-size: 1.5vh;
 }
 
 

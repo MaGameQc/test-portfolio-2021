@@ -303,7 +303,7 @@ li {
     bottom:0; 
     width:100%; 
     height:100%; 
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.7); 
     position: absolute; 
     opacity:0; 
     display:grid;
@@ -314,6 +314,7 @@ li {
     'testProject testProject gitHub gitHub'
      ;
      grid-gap:3px;
+     font-family: 'Orbitron', sans-serif;
     
 
   animation-name: overlayDisappearing;
@@ -324,29 +325,51 @@ li {
   cursor:pointer;
 }
 
-.miniTitle{
+.overlayTitleContainer{
 grid-area: title;
+text-align: center;
 }
- .testButtona{
-  grid-area: testProject;
-}
- .gitHub{
+
+.gitBtnSection{
   grid-area: gitHub;
 }  
 
+.overlayTitle{
+  text-shadow: 0 0 8px #03dbfc;
+   font-family: haloFont; 
+   color: white; 
+   background:black; 
+   border-bottom:rgb(255, 149, 36) solid 2px; 
+   font-size: 1.8rem;
+}
+ .demoBtnSection{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  grid-area: testProject;
+}
+
+.underDemoBtn{
+
+  color: #62c9fc;
+  transform: skew(-30deg);
+  width:60%;
+  background-color: transparent;
+  border: solid #62c9fc 2px;
+  font-size: 1vw;
+  position: relative;
+}
+
+.underDemoBtnText{
+  transform: skew(30deg);
+  opacity: 0;
+  margin:auto;
+  padding:5%;
+}
 
 
-/* .testButton{
-  background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(255, 149, 36, 1), rgba(0,0,0,0)) ;
-     color:white;
-      margin-top: -1px;
-       margin-bottom: -1px;
-        border-top: 1px solid rgb(255, 149, 36);
-         border-bottom: 1px solid rgb(255, 149, 36);
-          width: 40%;
-} */
-
-.projectsTestButton{
+.projectsDemoBtn{
   color: white;
   transform: skew(-30deg) translate(-5px, -5px);
   width:60%;
@@ -355,33 +378,30 @@ grid-area: title;
   color: #03dbfc;
   text-align:center;
   font-size: 1vw;
+  position: absolute;
   
-  animation-name: notHoveredTestButton;
+  animation-name: notHoveredDemoButton;
   animation-duration: .7s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
 }
 
-.underTestButton{
-
-  color: #62c9fc;
-  transform: skew(-30deg);
-  width:60%;
-  background-color: transparent;
-  border: solid rgb(255, 149, 36) 2px;
-  font-size: 1vw;
-
-}
-
-.projectsTestButton:hover{
-  animation-name: hoveredTestButton;
+.projectsDemoBtn:hover{
+  animation-name: hoveredDemoButton;
   animation-duration: .7s;
   animation-fill-mode: forwards;
   animation-timing-function: ease;
 }
 
-/*     git */
-.projectsGitButton{
+.DemoBtnText{
+  transform: skew(30deg);
+  padding:5%;
+  margin:auto;
+  padding:5%;
+}
+
+/*    -------------------------------------------------------------------------------------------------------- GIT --------------------------------------------------------------------------------  */
+.projectsGitBtn{
   color: white;
   transform: translate(5px, -5px) skew(30deg);
   width:60%;
@@ -390,6 +410,7 @@ grid-area: title;
   color: #03dbfc;
   text-align:center;
   font-size: 1vw;
+  position: absolute;
   
   animation-name: notHoveredGitButton;
   animation-duration: .7s;
@@ -398,24 +419,40 @@ grid-area: title;
 }
 
 
-
-.underGitButton{
+.underGitBtn{
 
   color: #62c9fc;
   transform: skew(30deg);
   width:60%;
   background-color: transparent;
-  border: solid rgb(255, 149, 36) 2px;
+  border: solid #62c9fc 2px;
   font-size: 1vw;
+  position: relative;
 
 }
 
-.projectsGitButton:hover{
+.underGitBtnText{
+  opacity: 0;
+  transform: skew(-30deg);
+  margin:auto;
+  padding:5%; 
+}
+
+.gitBtnText{
+  transform: skew(-30deg);
+  margin:auto;
+  padding:5%;
+}
+
+
+.projectsGitBtn:hover{
    animation-name: hoveredGitButton;
   animation-duration: .7s;
   animation-fill-mode: forwards;
   animation-timing-function: ease; 
 }
+
+
 
  @keyframes hoveredGitButton {
   from{transform: translate(5px, -5px) skew(30deg);}
@@ -426,11 +463,11 @@ grid-area: title;
   to{transform: translate(5px, -5px) skew(30deg);   box-shadow : none;}
 }  
 
-@keyframes hoveredTestButton {
+@keyframes hoveredDemoButton {
   from{transform: translate(-5px, -5px) skew(-30deg);}
   to{transform: translate(0px, 0px) skew(-30deg);   box-shadow : 0 0 12px #03dbfc; }
 }
- @keyframes notHoveredTestButton {
+ @keyframes notHoveredDemoButton {
   from{transform: translate(0px, 0px) skew(-30deg);   box-shadow : 0 0 12px #03dbfc;}
   to{transform: translate(-5px, -5px) skew(-30deg);   box-shadow : none;}
 }  

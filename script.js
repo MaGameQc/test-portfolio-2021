@@ -6,7 +6,14 @@ setTimeout(function () {
 }, 2500);
 
 $("#aboutMe").click(function () {
-  var text = "Bonjour, mon nom est Tommy Audet, gros fan de programmation web et de halo, vous l'aurez surement deviner tout seul... ceci est un test";
+
+
+
+
+
+
+  
+  var text = 'Bonjour, moi cest Tommy, programmeur web front-end qui compte bien devenir full stack un jour. Je suis animateur de podcast, compositeur et ce qui me passionne par dessu tout, cest la technologie en générale. Un jour alors que je travaillais tout les jours sur une application web, je me suis posé la question "mais comment ont ils créer ce site web", et depuis, jai jamais cesser de programmer';
   var writeTextIn = document.getElementById("aboutMeText");
   var i = 0;
 

@@ -1,8 +1,10 @@
 setTimeout(function () {
-  $("#rightDoor").css("display", "none");
-  $("#leftDoor").css("display", "none");
+  // $("#rightDoor").css("display", "none");
+  // $("#leftDoor").css("display", "none");
 
-  $("#doorBackground").css("display", "none");
+  // $("#doorBackground").css("display", "none");
+  $("#doorContainer").css("display", "none");
+
 }, 2500);
 
 $("#aboutMe").click(function () {

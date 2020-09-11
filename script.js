@@ -68,13 +68,21 @@ setInterval(function () {
 }, 20);
 
 $("#projets").click(function () {
-  $("#upperContainer").toggle();
-  $("#projetsContainer").toggle();
+  $("#aboutMeContainer").css("display", "none");
+  $("#projectCont").css("display", "grid");
+  $("#contactMeMainContainer").css("display", "none");
 });
 
 $("#aboutMe").click(function () {
-  $("#aboutMeContainer").toggle();
-  $("#projectCont").toggle();
+  $("#aboutMeContainer").css("display", "grid");
+  $("#projectCont").css("display", "none");
+  $("#contactMeMainContainer").css("display", "none");
+});
+
+$("#contactMe").click(function(){
+  $("#aboutMeContainer").css("display", "none");
+  $("#projectCont").css("display", "none");
+  $("#contactMeMainContainer").css("display", "grid");
 });
 
 ///////////////////////////ham menu

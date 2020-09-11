@@ -502,7 +502,8 @@ text-align: center;
 
 #aboutMeContainer{
   display:grid; 
-  grid-template-rows: 45vh;
+  grid-template-rows: auto;
+  /*si marche pas mettre 45vh */
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -532,15 +533,7 @@ margin:5%;
    object-fit:cover;  
 }
 
-/* #aboutMeImage{
-  
-  background-image: url("image/tomblue.png");
-  background-size: cover;
-  background-position: center;
-  min-width: 100%;
-  min-height: 100%;
 
-} */
 
 
   #noisyScreen{
@@ -612,10 +605,11 @@ display:grid;
 grid-template-rows: 0.3fr 1fr;
 grid-template-columns: 1fr;
 
+font-size: 1.8vh;
 padding: 5%;
 display:inline-block;
 min-width: 100%;
-height:100%;
+
 background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.4) 80%);
 
 }
@@ -626,6 +620,7 @@ background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0
 }
 
 #aboutMeTitle{
+  font-size: 4vh;
   font-family: orbitron; 
   color: #03dbfc;
   width: 100%;
@@ -635,7 +630,7 @@ background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0
 
 #aboutMeText{
   font-family: orbitron;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.8px;
 }
 
 #blackScreen{
@@ -673,8 +668,77 @@ background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0
 
 
 
-/* ******************************************************************************************* Reste **************************************************************** */
+/* ******************************************************************************************* Me contacter **************************************************************** */
 
+
+
+#contactMeMainContainer{
+  padding: 2% 0;
+  width: 100%;
+  height: 100%;
+}
+
+#contactMeContainer{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas : 
+  'personalInfo contactForm';
+  grid-gap: 3px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.4) 80%);
+  
+}
+
+#personalInfoContainer{
+  grid-area: "personalInfo";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5%;
+}
+
+#personalInfoContainer p{
+  color: white;
+  font-family: orbitron, sans-serif;
+  letter-spacing: 0.8px;
+}
+
+
+#personalInfoTitle{
+  font-size: 4vh;
+  font-family: orbitron; 
+  color: #03dbfc;
+  width: 80%;
+  border-bottom: 2px solid rgb(255, 149, 36);
+  padding-bottom: 5px;
+}
+
+
+
+#contactFormContainer{
+  grid-area: "contactForm";
+  grid-area: "personalInfo";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5%;
+  color: white;
+  font-family: orbitron, sans-serif;
+
+}
+
+input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;	
+  width: 100%;
+
+}
+
+
+
+
+/* ******************************************************************************************* Reste **************************************************************** */
 
 
 

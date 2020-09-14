@@ -767,11 +767,68 @@ textarea{
   font-size: 1.4vh;
 }
 
-#ContactFormButton{
-  height: 1.4vh;
-  width: 10%;
-  font-size: 0.8vh;
+
+#contactFormButtonSection{
+  display: flex; 
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  width: 60%;
 }
+
+
+.underContactFormButton{
+
+  color: #62c9fc;
+  transform: skew(30deg);
+  background-color: transparent;
+  border: solid #62c9fc 2px;
+  font-size: 1vw;
+  position: relative;
+
+}
+
+.contactFormButton{
+  color: white;
+  /* transform: translate(5px, -5px) skew(30deg); */
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid rgb(255, 149, 36) 2px;
+  color: #03dbfc;
+  text-align:center;
+  font-size: 1vw;
+  position: absolute;
+  
+  animation-name: notHoveredGitButton;
+  animation-duration: .7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+
+
+.contactFormButton:hover{
+  animation-name: hoveredGitButton;
+  animation-duration: .7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.underContactFormBtnText{
+  transform: skew(-30deg);
+  opacity: 0;
+  margin:auto;
+  padding:5%;
+  font-size: 1vh;
+}
+
+.ContactFormBtnText{
+  transform: skew(-30deg);
+  padding:5%;
+  margin:auto;
+  padding:5%;
+  font-size: 1vh;
+}
+
 
 /* ******************************************************************************************* Reste **************************************************************** */
 
@@ -861,3 +918,97 @@ textarea{
 /* ************************************************************************************************* playground ************************************************************************************* */
 
 
+@media only screen and (max-width: 992px) {
+  #projectCont {
+      grid-template-areas:
+          "project1 project2"
+          "project3 project3";
+  }
+  .thumbnailContainer:nth-child(1) {
+      grid-area: project1;
+  }
+  .thumbnailContainer:nth-child(2) {
+      grid-area: project2;
+  }
+  .thumbnailContainer:nth-child(3) {
+      grid-area: project3;
+      width: 55%;
+      margin: auto;
+  }
+
+  #aboutMeContainer {
+      grid-template-rows: repeat(2, auto);
+      grid-template-columns: 1fr;
+      display: grid;
+  }
+
+  #aboutMeTextContainer {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      height: 100%;
+  }
+
+  #aboutMeImageContainer {
+      grid-row: 1/2;
+      grid-column: 1/2;
+  }
+
+
+  #contactMeContainer{
+      display: grid;
+      grid-template-areas :
+      "title title"
+      "contactForm contactForm"
+      "personalInfo personalInfo"
+      ;
+      /* grid-template-rows: 45vh; */
+      grid-gap: 3px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.4) 80%);
+      text-align: center;
+
+  }
+  #contactMeTitleContainer{
+      grid-area: title;
+
+  }
+
+  #personalInfoContainer{
+      grid-area: personalInfo;
+  }
+
+  #contactFormContainer{
+      grid-area: contactForm;
+  }
+
+  input, textarea{
+    margin: auto;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+
+
+  #projectCont {
+      grid-template-areas:
+          "project1"
+          "project2"
+          "project3";
+  }
+  .thumbnailContainer:nth-child(1) {
+      grid-area: project1;
+  }
+  .thumbnailContainer:nth-child(2) {
+      grid-area: project2;
+  }
+  .thumbnailContainer:nth-child(3) {
+      grid-area: project3;
+      width: 100%;
+  }
+
+
+  /* body{
+display:none;
+} */
+}

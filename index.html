@@ -239,20 +239,20 @@
 
 <!-- ************************************************************************************** me contacter  ************************************************************************************************** -->
 
-                
+
                 <section id="contactMeMainContainer" style="display: none;">
                     <div id="contactMeContainer">
                         <div id="contactMeTitleContainer">
                             <h1 id="personalInfoTitle">Me Contacter</h1>
                         </div>
                     <div id="personalInfoContainer">
-                        
-                            
+
+
                             <p id="email">tommyaudet@magame.ca</p>
                             <p id="phone">438-405-1277</p>
                             <p id="adress">77 rue st-francois<br>McMasterville<br>J3G 1E7<br>QC</p>
-    
-                        
+
+
                     </div>
 
                     <div id="contactFormContainer">
@@ -262,7 +262,18 @@
                         <input type="email" placeholder="exemple@hotmail.com">
                         <p class="contactMeLabel">message :</p>
                         <textarea name="" id="" cols="" rows="2"></textarea>
-                        <button id="ContactFormButton">Envoyer</button>
+                        <!-- <button id="ContactFormButton">Envoyer</button> -->
+
+                        <div id="contactFormButtonSection" >
+                            <button class="underContactFormButton">
+                                <p class="underContactFormBtnText">ENVOYER</p>
+                            </button>
+
+                            <button class="contactFormButton">
+                                <p class="ContactFormBtnText">ENVOYER</p>
+                            </button>
+                        </div>
+
                     </div>
                 </div>
                 </section>
@@ -319,96 +330,7 @@
                     grid-template-rows: auto;
                 }
 
-                @media only screen and (max-width: 992px) {
-                    #projectCont {
-                        grid-template-areas:
-                            "project1 project2"
-                            "project3 project3";
-                    }
-                    .thumbnailContainer:nth-child(1) {
-                        grid-area: project1;
-                    }
-                    .thumbnailContainer:nth-child(2) {
-                        grid-area: project2;
-                    }
-                    .thumbnailContainer:nth-child(3) {
-                        grid-area: project3;
-                        width: 55%;
-                        margin: auto;
-                    }
-
-                    #aboutMeContainer {
-                        grid-template-rows: repeat(2, auto);
-                        grid-template-columns: 1fr;
-                        display: grid;
-                    }
-
-                    #aboutMeTextContainer {
-                        grid-row: 2/3;
-                        grid-column: 1/2;
-                        height: 100%;
-                    }
-
-                    #aboutMeImageContainer {
-                        grid-row: 1/2;
-                        grid-column: 1/2;
-                    }
-
-
-                    #contactMeContainer{
-                        display: grid;
-                        grid-template-areas : 
-                        "title title"
-                        "personalInfo personalInfo"
-                        "contactForm contactForm"
-                        ;
-                        /* grid-template-rows: 45vh; */
-                        grid-gap: 3px;
-                        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0.4) 80%);
-                    }
-                    #contactMeTitleContainer{
-                        grid-area: title;
-                    }
-
-                    #personalInfoContainer{
-                        grid-area: personalInfo;
-                    }
-
-                    #contactFormContainer{
-                        grid-area: contactForm;
-                    }
-
-
-                    
-
-                }
-
-                @media only screen and (max-width: 768px) {
-
-                    
-
-                    #projectCont {
-                        grid-template-areas:
-                            "project1"
-                            "project2"
-                            "project3";
-                    }
-                    .thumbnailContainer:nth-child(1) {
-                        grid-area: project1;
-                    }
-                    .thumbnailContainer:nth-child(2) {
-                        grid-area: project2;
-                    }
-                    .thumbnailContainer:nth-child(3) {
-                        grid-area: project3;
-                        width: 100%;
-                    }
-                    
-
-                    /* body{
-        display:none;
-    } */
-                }
+                
             </style>
 
             <!-- ************************************************************************************** FIN PROJETS ************************************************************************************************** -->

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
     <head>
         <!-- Required meta tags -->
@@ -80,7 +80,7 @@
 
                     <div class="thumbnailContainer">
                         <div class="thumbnailProjet">
-                            <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
+                            <img src="piano.png" class="img-fluid" style="position: relative;" />
                             <div class="projectOverlay">
                                 <div class="overlayTitleContainer overlaySection">
                                     <h1 class="overlayTitle">LearnPiano.ca</h1>
@@ -123,7 +123,7 @@
 
                     <div class="thumbnailContainer">
                         <div class="thumbnailProjet">
-                            <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
+                            <img src="piano.png" class="img-fluid" style="position: relative;" />
                             <div class="projectOverlay">
                                 <div class="overlayTitleContainer overlaySection">
                                     <h1 class="overlayTitle">LearnPiano.ca</h1>
@@ -166,7 +166,7 @@
 
                     <div class="thumbnailContainer">
                         <div class="thumbnailProjet">
-                            <img src="https://www.diemeto.providedspace.com/piano.png" class="img-fluid" style="position: relative;" />
+                            <img src="piano.png" class="img-fluid" style="position: relative;" />
                             <div class="projectOverlay">
                                 <div class="overlayTitleContainer overlaySection">
                                     <h1 class="overlayTitle">LearnPiano.ca</h1>
@@ -255,26 +255,28 @@
 
                     </div>
 
-                    <div id="contactFormContainer">
+                    <form id="contactFormContainer" action="contactform.php" method="post">
                         <p class="contactMeLabel">Nom :</p>
-                        <input type="text" placeholder="Ex: Éric Gingras">
+                        <input type="text" name="nom" placeholder="Ex: Éric Gingras">
                         <p class="contactMeLabel" >courriel :</p>
-                        <input type="email" placeholder="exemple@hotmail.com">
+                        <input type="email" name="courriel" placeholder="exemple@hotmail.com">
                         <p class="contactMeLabel">message :</p>
-                        <textarea name="" id="" cols="" rows="2"></textarea>
+                        <textarea name="message" id="" cols="" rows="2"></textarea>
                         <!-- <button id="ContactFormButton">Envoyer</button> -->
 
                         <div id="contactFormButtonSection" >
-                            <button class="underContactFormButton">
+                            <button class="contactFormButton" type="submit" name="submit">
+                                <p class="ContactFormBtnText">ENVOYER</p>
+                            </button>
+                            
+                            <button class="underContactFormButton" style="user-select: none;">
                                 <p class="underContactFormBtnText">ENVOYER</p>
                             </button>
 
-                            <button class="contactFormButton">
-                                <p class="ContactFormBtnText">ENVOYER</p>
-                            </button>
+
                         </div>
 
-                    </div>
+                    </form>
                 </div>
                 </section>
 

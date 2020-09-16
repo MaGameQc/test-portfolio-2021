@@ -6,7 +6,7 @@ setTimeout(function () {
   $("#doorContainer").css("display", "none");
 }, 2500);
 
-$("#aboutMe").click(function () {
+$("#aboutMe, #aboutMeList").click(function () {
   $("#aboutMeText").empty();
 
   var text =
@@ -62,19 +62,19 @@ setInterval(function () {
   }
 }, 20);
 
-$("#projets").click(function () {
+$("#projets, #projectList").click(function () {
   $("#aboutMeContainer").css("display", "none");
   $("#projectCont").css("display", "grid");
   $("#contactMeMainContainer").css("display", "none");
 });
 
-$("#aboutMe").click(function () {
+$("#aboutMe, #aboutMeList").click(function () {
   $("#aboutMeContainer").css("display", "grid");
   $("#projectCont").css("display", "none");
   $("#contactMeMainContainer").css("display", "none");
 });
 
-$("#contactMe").click(function () {
+$("#contactMe, #contactMeList").click(function () {
   $("#aboutMeContainer").css("display", "none");
   $("#projectCont").css("display", "none");
   $("#contactMeMainContainer").css("display", "grid");
@@ -161,15 +161,7 @@ animateHamMenuStepTwo = () => {
   );
 };
 
-// $(".projectsTestButton").on("mouseover", function(){
-//     let getElementIndex = $(this).index();
-//     alert(getElementIndex);
-//   document.getElementsByClassName("underButton")[getElementIndex].animate([{ transform: "translate(0px, 0px) skew(-30deg)" }, { transform: "translate(-10px, -10px) skew(-30deg)" }], {
-//     duration: 800,
-//     delay: 0,
-//     fill: "forwards",
-// });
-// });
+
 
 var autoTyper = {
   description1:
@@ -182,18 +174,19 @@ var autoTyper = {
   project3: document.getElementById("project3"),
 
   title: document.getElementById("title"),
+  subTitle: document.getElementById("subTitle"),
   generatedText: document.getElementById("aboutMeText2"),
   autoTypeIndex: 0,
 
   showDescription: function () {
       this.title.style.display = "none";
-      document.getElementById("subTitle").style.display = "none";
+      this.subTitle.style.display = "none";
       this.generatedText.style.display = "inline";
   },
 
   hideDescription: function () {
       this.title.style.display = "block";
-      document.getElementById("subTitle").style.display = "block";
+      this.subTitle.style.display = "block";
       this.generatedText.innerHTML = "";
       this.generatedText.style.display = "none";
   },
@@ -254,16 +247,7 @@ var autoTyper = {
   },
 };
 
-console.log("1111" + autoTyper.autoType);
 
 autoTyper.createMouseEnterEventListener();
 autoTyper.createMouseLeaveEventListener();
 
-// function shit() {
-//   if (i < text.length) {
-//       writeTextIn.innerHTML += text.charAt(i);
-
-//       i++;
-//       setTimeout(shit, 30);
-//   }
-// }

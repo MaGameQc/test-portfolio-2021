@@ -1,3 +1,16 @@
+#aboutMeText2{
+
+  color:white;
+  display:inline;
+  font-size: 1.8vh;
+
+  animation-name: blinkingBorder;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  display:inline;
+}
+
 :root{
   
 }
@@ -804,7 +817,7 @@ input {
   -moz-box-sizing: border-box;
   box-sizing: border-box;	
   width: 60%;
-  height: 7%;
+  height: 2.3vh;
   padding: 0.4%;
   border: 2px solid rgb(255, 149, 36);
   background-color: transparent;
@@ -816,7 +829,7 @@ textarea{
   -moz-box-sizing: border-box;
   box-sizing: border-box;	
   width: 60%;
-  height: 20%;
+  height: 8.5vh;
   padding: 0.4%;
   border: 2px solid rgb(255, 149, 36);
   background-color: transparent;
@@ -920,7 +933,7 @@ textarea{
   width: 100vw;
   min-height: 45vh;
   grid-gap: 2px;
-  grid-template-columns: 10% auto auto 10%;
+  grid-template-columns: 10% 1fr 1fr 10%;
   grid-template-rows: auto;
   padding-top: 2%;
 }

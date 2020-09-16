@@ -176,3 +176,70 @@ animateHamMenuStepTwo = () => {
 //     fill: "forwards",
 // });
 // });
+
+var autoTyper = {
+  description1 : "Ceci est un projet que j'ai réaliser afin d'apprendre le piano. apprendre les accords, les gammes majeurs et mineurs et surtout, me servir du WEB MIDI API afin qu'il soit compatible avec les clavier MIDI brancher par usb. Ce projet m'as appris qu'il y as étonnament une logique mathématique derrirrière la musique et que c'est donc facilement programmable.",
+  description2 : "ceci est un projet que j'ai eu en tête pendant très longtemps",
+  description3 : "ceci est un projet que j'ai eu en tête pendant très longtemps",
+
+  autoType : function(elementToTypeIn, text){
+    
+    let x = 0;
+    let interval = setInterval(function(){
+      if(document.getElementById("title").style.display == "none"){
+        elementToTypeIn.innerHTML += text.charAt(x);
+        x++
+      } else{
+        clearInterval(interval);
+        return;
+      }
+
+    }, 20);
+    
+
+  }
+}
+
+
+
+var project1 = document.getElementById("project1");
+var project2 = document.getElementById("project2");
+var project3 = document.getElementById("project3");
+var title = document.getElementById("title")
+
+
+project1.addEventListener("mouseenter", function(){
+  if(title.style.display != "none"){
+    title.style.display = "none";
+    document.getElementById("subTitle").style.display = "none";
+    document.getElementById("aboutMeText2").style.display = "inline";
+    autoTyper.autoType(document.getElementById("aboutMeText2"),autoTyper.description1);
+  } 
+
+  
+});
+
+project1.addEventListener("mouseleave", function(){
+  if(title.style.display == "none"){
+    title.style.display = "block";
+    document.getElementById("subTitle").style.display = "block";
+    document.getElementById("aboutMeText2").innerHTML = "";
+    document.getElementById("aboutMeText2").style.display = "none";
+    
+  }
+});
+
+
+
+
+
+
+
+// function shit() {
+//   if (i < text.length) {
+//       writeTextIn.innerHTML += text.charAt(i);
+
+//       i++;
+//       setTimeout(shit, 30);
+//   }
+// }

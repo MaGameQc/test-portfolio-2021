@@ -1,3 +1,49 @@
+var projectsButton = {
+  ghProject1 : document.getElementById("ghProject1"),
+  demoProject1 : document.getElementById("demoProject1"),
+  ghProject2 : document.getElementById("ghProject2"),
+  demoProject2 : document.getElementById("demoProject2"),
+  ghProject3 : document.getElementById("ghProject3"),
+  demoProject3 : document.getElementById("demoProject3"),
+
+  createListenners : function(){
+    this.ghProject1.addEventListener("click", function(){
+      projectsButton.redirect("https://github.com/MaGameQc/Projet-piano");
+    });
+    this.demoProject1.addEventListener("click", function(){
+      projectsButton.redirect("https://magame.ca/piano/");
+    });
+
+    this.ghProject2.addEventListener("click", function(){
+      projectsButton.redirect("https://github.com/MaGameQc/projet-JohnTube");
+    });
+    this.demoProject2.addEventListener("click", function(){
+      projectsButton.redirect("https://magame.ca/jonTube/");
+    });
+
+    this.ghProject3.addEventListener("click", function(){
+      projectsButton.redirect("https://github.com/MaGameQc/compendium");
+    });
+    this.demoProject3.addEventListener("click", function(){
+      projectsButton.redirect("https://magame.ca/compendium/");
+    });
+    
+  },
+
+  redirect : function(url){
+    window.location.href = url;
+  }
+}
+
+projectsButton.createListenners();
+
+
+
+
+
+
+
+
 setTimeout(function () {
   // $("#rightDoor").css("display", "none");
   // $("#leftDoor").css("display", "none");
@@ -6,23 +52,31 @@ setTimeout(function () {
   $("#doorContainer").css("display", "none");
 }, 2500);
 
+
+var aboutMeState = false;
 $("#aboutMe, #aboutMeList").click(function () {
-  $("#aboutMeText").empty();
+  if(aboutMeState == false){
+    $("#aboutMeText").empty();
 
-  var text =
-      'Bonjour, moi cest Tommy, programmeur web front-end qui compte bien devenir full stack un jour. Je suis animateur de podcast, compositeur et ce qui me passionne par dessu tout, cest la technologie en générale. Un jour alors que je travaillais tout les jours sur une application web, je me suis posé la question "mais comment ont ils créer ce site web", et depuis, jai jamais cesser de programmer';
-  var writeTextIn = document.getElementById("aboutMeText");
-  var i = 0;
-
-  function shit() {
-      if (i < text.length) {
-          writeTextIn.innerHTML += text.charAt(i);
-
-          i++;
-          setTimeout(shit, 30);
-      }
+    var text = "Bonjour, moi c'est Tommy, programmeur web front-end. Un jour, alors que je travaillais comme agent au soutien technique en informatique, je me suis mis à me demander comment fonctionne un site web, car je travaille sur des applications web. J'ai appris ce qu'était HTML et CSS, et j'ai jamais décroché depuis. J'ai tout appris seul, je sais comment apprendre et rapidement, j'ai développé plusieurs petits projets en HTML, CSS, Bootstrap, Javascript, Jquery, PHP, MySql." ;
+    var writeTextIn = document.getElementById("aboutMeText");
+    var i = 0;
+  
+    function writing() {
+        if (i < text.length) {
+            writeTextIn.innerHTML += text.charAt(i);
+  
+            i++;
+            setTimeout(writing, 30);
+        }
+    }
+    writing();
   }
-  shit();
+
+  aboutMeState = true;
+
+  
+
 });
 
 var imageIsLoaded = new Image();
@@ -164,10 +218,9 @@ animateHamMenuStepTwo = () => {
 
 
 var autoTyper = {
-  description1:
-      "Ceci est un projet que j'ai réaliser afin d'apprendre le piano. apprendre les accords, les gammes majeurs et mineurs et surtout, me servir du WEB MIDI API afin qu'il soit compatible avec les clavier MIDI brancher par usb. Ce projet m'as appris qu'il y as étonnament une logique mathématique derrirrière la musique et que c'est donc facilement programmable.",
-  description2: "ceci est le test no 2 ceci est le test no 2 ceci est le test no 2 ceci est le test no 2 ceci est le test no 2 ceci est le test no 2 ceci est le test no 2",
-  description3: "test no 3 test no 3 test no 3 test no 3 test no 3 test no 3 test no 3",
+  description1: "Learn piano est une application web permettant d'apprendre les gammes, accords mineurs et majeurs au piano. Il est possible de jouer des notes avec les touches de votre clavier d'ordinateur, avec un click de la souris ou encore, Grace au Web Midi API, de brancher son piano par usb, et jouer les notes.",
+  description2: "JonTube est Une reproduction de YouTube en version simplifié. Il est possible d'écouter une vidéo, la mettre en pause, la mettre en sourdine, l'avancer, commenter une vidéo et tout est codé en vanilla Javascript, puisque Jquery devient désuet.",
+  description3: "Compendium est un projet que j'ai programmer pour les assistants technique en pharmacie. Ces assistants doivent souvent trouver le nom de la molécule d'un médicament rapidement. Par exemple, le nom de la molécule du Tylenol c'est de l'acétaminophène, et le seul compendium auquels ces employés ont accès est un petit livre pour se rappeller des noms plus compliqué comme le sulfaméthoxazole par exemple.",
 
   project1: document.getElementById("project1"),
   project2: document.getElementById("project2"),
@@ -251,3 +304,9 @@ var autoTyper = {
 autoTyper.createMouseEnterEventListener();
 autoTyper.createMouseLeaveEventListener();
 
+$("#myResumeList").click(function(){
+  window.location.href = "cv/Tommy Audet.pdf"
+});
+$("#myResumePc").click(function(){
+  window.location.href = "cv/Tommy Audet.pdf"
+});

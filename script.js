@@ -8,10 +8,10 @@ var projectsButton = {
 
   createListenners : function(){
     this.ghProject1.addEventListener("click", function(){
-      projectsButton.redirect("https://github.com/MaGameQc/Projet-piano");
+      projectsButton.redirect("https://github.com/MaGameQc/hamburgerMenuMaker");
     });
     this.demoProject1.addEventListener("click", function(){
-      projectsButton.redirect("https://magame.ca/piano/");
+      projectsButton.redirect("https://magame.ca/hamburgerMaker/");
     });
 
     this.ghProject2.addEventListener("click", function(){
@@ -22,10 +22,10 @@ var projectsButton = {
     });
 
     this.ghProject3.addEventListener("click", function(){
-      projectsButton.redirect("https://github.com/MaGameQc/compendium");
+      projectsButton.redirect("https://github.com/MaGameQc/Projet-piano");
     });
     this.demoProject3.addEventListener("click", function(){
-      projectsButton.redirect("https://magame.ca/compendium/");
+      projectsButton.redirect("https://magame.ca/piano");
     });
     
   },
@@ -218,9 +218,9 @@ animateHamMenuStepTwo = () => {
 
 
 var autoTyper = {
-  description1: "Learn piano est une application web permettant d'apprendre les gammes, accords mineurs et majeurs au piano. Il est possible de jouer des notes avec les touches de votre clavier d'ordinateur, avec un click de la souris ou encore, Grace au Web Midi API, de brancher son piano par usb, et jouer les notes.",
+  description1: "BurgerMaker est un site web sur lequel vous pouvez choisir l'animation d'une icône hamburger, générer son code HTML et CSS, copier ce code et le coller dans votre projet web.",
+  description3: "Learn piano est une application web permettant d'apprendre les gammes, accords mineurs et majeurs au piano. Il est possible de jouer des notes avec les touches de votre clavier d'ordinateur, avec un click de la souris ou encore, Grace au Web Midi API, de brancher son piano par usb, et jouer les notes.",
   description2: "JonTube est Une reproduction de YouTube en version simplifié. Il est possible d'écouter une vidéo, la mettre en pause, la mettre en sourdine, l'avancer, commenter une vidéo et tout est codé en vanilla Javascript, puisque Jquery devient désuet.",
-  description3: "Compendium est un projet que j'ai programmer pour les assistants technique en pharmacie. Ces assistants doivent souvent trouver le nom de la molécule d'un médicament rapidement. Par exemple, le nom de la molécule du Tylenol c'est de l'acétaminophène, et le seul compendium auquels ces employés ont accès est un petit livre pour se rappeller des noms plus compliqué comme le sulfaméthoxazole par exemple.",
 
   project1: document.getElementById("project1"),
   project2: document.getElementById("project2"),
